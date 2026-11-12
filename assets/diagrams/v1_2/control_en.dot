@@ -1,0 +1,32 @@
+digraph architecture {
+graph [rankdir=LR,bgcolor="white",pad="0.4",nodesep=".5",ranksep=".85",splines=polyline,compound=true,labelloc="t",labeljust="l",label="τMOTION  |  Real-Time Control and Feedback\nv1.2 · Plan feasibility and command timing are separate concerns · 20Hz DESIGN TARGET",fontname="DejaVu Sans",fontsize=26,fontcolor="#61268c",size="20,8",ratio=auto];
+node [fontname="DejaVu Sans"];
+edge [fontname="DejaVu Sans"];
+subgraph cluster_p {label="LEARNED PROPOSAL";color="#bd527e";style="rounded,dashed";penwidth=1.8; bgcolor="#ffedf5";
+"policy" [label="M11  RL CANDIDATE SELECTION\nj + 8D Δv/Δd\ncritic and CoT-conditioned",shape=box,style="rounded,filled",fillcolor="#ffedf5",color="#bd527e",penwidth=1.8,fontname="DejaVu Sans",fontsize=13,width=2.55,margin="0.22,0.18"];
+"res" [label="M12  RESIDUAL REFERENCE\n4 speed, 4 lateral knots\nStart-state continuity",shape=box,style="rounded,filled",fillcolor="#ffedf5",color="#bd527e",penwidth=1.8,fontname="DejaVu Sans",fontsize=13,width=2.55,margin="0.22,0.18"];
+}
+subgraph cluster_n {label="PHYSICAL GATE";color="#ca943a";style="rounded,dashed";penwidth=1.8; bgcolor="#fff2d9";
+"safety" [label="M13  PLAN FEASIBILITY SUPERVISOR\nVehicle limits · actor hazards\nRoad boundaries · age/masks",shape=box,style="rounded,filled",fillcolor="#fff2d9",color="#ca943a",penwidth=1.8,fontname="DejaVu Sans",fontsize=13,width=2.55,margin="0.22,0.18"];
+}
+subgraph cluster_c {label="CONTROL & TIMING";color="#429269";style="rounded,dashed";penwidth=1.8; bgcolor="#e9f6ed";
+"nmpc" [label="M14  DYNAMIC NMPC / OCP\n[X,Y,ψ,vx,vy,r,δ,a]\n[δ̇,jerk] · 4s / 40 nodes",shape=box,style="rounded,filled",fillcolor="#e9f6ed",color="#429269",penwidth=1.8,fontname="DejaVu Sans",fontsize=13,width=3.2,margin="0.22,0.18"];
+"gate" [label="M22  DEADLINE / ID GUARDIAN\nTarget total control budget 50ms\nReject late / stale results",shape=box,style="rounded,filled",fillcolor="#e9f6ed",color="#429269",penwidth=1.8,fontname="DejaVu Sans",fontsize=13,width=2.55,margin="0.22,0.18"];
+}
+subgraph cluster_o {label="ACTUATION / TRACE";color="#7089a2";style="rounded,dashed";penwidth=1.8; bgcolor="#edf1f8";
+"fallback" [label="FALLBACK CONTROL BRANCH\nOnly valid leftover control sequence\nor controlled deceleration",shape=box,style="rounded,filled",fillcolor="#edf1f8",color="#7089a2",penwidth=1.8,fontname="DejaVu Sans",fontsize=13,width=2.55,margin="0.22,0.18"];
+"car" [label="M15  SINGLE ACTUATOR WRITER\nSteering + throttle + brake\nCARLA vehicle state changes",shape=box,style="rounded,filled",fillcolor="#edf1f8",color="#7089a2",penwidth=1.8,fontname="DejaVu Sans",fontsize=13,width=2.55,margin="0.22,0.18"];
+"trace" [label="M17  TRACE & CAUSALITY\nselected / proposed / accepted\nsolver / guardian / actual",shape=box,style="rounded,filled",fillcolor="#f1eaff",color="#8452b0",penwidth=1.8,fontname="DejaVu Sans",fontsize=13,width=2.55,margin="0.22,0.18"];
+}
+"policy"->"res" [color="#77619b",penwidth=2.0,arrowsize=.8,style=solid,constraint=true];
+"res"->"safety" [color="#77619b",penwidth=2.0,arrowsize=.8,style=solid,constraint=true];
+"safety"->"nmpc" [color="#77619b",penwidth=2.0,arrowsize=.8,style=solid,constraint=true];
+"nmpc"->"gate" [color="#77619b",penwidth=2.0,arrowsize=.8,style=solid,constraint=true];
+"gate"->"car" [color="#77619b",penwidth=2.0,arrowsize=.8,style=solid,constraint=true];
+"gate"->"fallback" [color="#9869ab",penwidth=2.0,arrowsize=.8,style=dashed,constraint=true,label="reject",fontsize=10,fontcolor="#47556c"];
+"fallback"->"car" [color="#77619b",penwidth=2.0,arrowsize=.8,style=solid,constraint=true];
+"nmpc"->"policy" [color="#9869ab",penwidth=2.0,arrowsize=.8,style=dashed,constraint=false,label="prior tracking",fontsize=10,fontcolor="#47556c"];
+"car"->"trace" [color="#9869ab",penwidth=2.0,arrowsize=.8,style=dashed,constraint=false];
+"res"->"trace" [color="#9869ab",penwidth=2.0,arrowsize=.8,style=dashed,constraint=false];
+"gate"->"trace" [color="#9869ab",penwidth=2.0,arrowsize=.8,style=dashed,constraint=false];
+}

@@ -1,0 +1,40 @@
+digraph architecture {
+graph [rankdir=LR,bgcolor="white",pad="0.4",nodesep=".5",ranksep=".85",splines=polyline,compound=true,labelloc="t",labeljust="l",label="τMOTION  |  Offline Training and Validation\nv1.2 · Expert → visibility → multi-target → critic → PPO/CVaR → held-out benchmark",fontname="DejaVu Sans",fontsize=26,fontcolor="#61268c",size="25,10",ratio=auto];
+node [fontname="DejaVu Sans"];
+edge [fontname="DejaVu Sans"];
+subgraph cluster_ing {label="DATA & PROVENANCE";color="#5284c7";style="rounded,dashed";penwidth=1.8; bgcolor="#eaf2ff";
+"data" [label="DIVERSE DRIVING EPISODES\nRecorded data + CARLA / NAVSIM\nRig/route/scenario/seed fingerprints",shape=box,style="rounded,filled",fillcolor="#eaf2ff",color="#5284c7",penwidth=1.8,fontname="DejaVu Sans",fontsize=13,width=2.55,margin="0.22,0.18"];
+"expert" [label="EXPERT POLICY & DATA\nPrivileged classical expert + native control\nOracle data NEVER passed to student",shape=box,style="rounded,filled",fillcolor="#eaf2ff",color="#5284c7",penwidth=1.8,fontname="DejaVu Sans",fontsize=13,width=3.1,margin="0.22,0.18"];
+"cache" [label="VERSIONED DATA CACHE\nPreprocess / model / dataset hashes\nReject stale cache",shape=box,style="rounded,filled",fillcolor="#eaf2ff",color="#5284c7",penwidth=1.8,fontname="DejaVu Sans",fontsize=13,width=2.55,margin="0.22,0.18"];
+}
+subgraph cluster_teac {label="OFFLINE SUPERVISION — ORACLE ISOLATION";color="#8452b0";style="rounded,dashed";penwidth=1.8; bgcolor="#f1eaff";
+"vis" [label="VISIBILITY / OCCLUSION LABELS\nActor exists ≠ sensor-visible\nOffline instance/depth/LiDAR labels",shape=box,style="rounded,filled",fillcolor="#f1eaff",color="#8452b0",penwidth=1.8,fontname="DejaVu Sans",fontsize=13,width=3.0,margin="0.22,0.18"];
+"teacher" [label="FUTURE-PRIVILEGED TEACHER\nFuture allowed in training ONLY\nCounterfactual outcomes need rollout",shape=box,style="rounded,filled",fillcolor="#f1eaff",color="#8452b0",penwidth=1.8,fontname="DejaVu Sans",fontsize=13,width=3.15,margin="0.22,0.18"];
+"multi" [label="MULTIPLE VALID TRAJECTORY TARGETS\nOne expert path is not the only valid option\nValid masks + source protocol",shape=box,style="rounded,filled",fillcolor="#f1eaff",color="#8452b0",penwidth=1.8,fontname="DejaVu Sans",fontsize=13,width=3.1,margin="0.22,0.18"];
+}
+subgraph cluster_train {label="TRAINING STAGE I";color="#ca943a";style="rounded,dashed";penwidth=1.8; bgcolor="#fff2d9";
+"critic" [label="SAFETY CRITIC TRAINING\nNC/DAC/TTC/DDC/EP/comfort\nRanking + false-safe + calibration",shape=box,style="rounded,filled",fillcolor="#fff2d9",color="#ca943a",penwidth=1.8,fontname="DejaVu Sans",fontsize=13,width=3.1,margin="0.22,0.18"];
+"ranker" [label="SUPERVISED CANDIDATE RANKING\nHeuristic / physical / multihead scores\nSame frozen candidate pool",shape=box,style="rounded,filled",fillcolor="#fff2d9",color="#ca943a",penwidth=1.8,fontname="DejaVu Sans",fontsize=13,width=2.55,margin="0.22,0.18"];
+}
+subgraph cluster_ppo {label="TRAINING STAGE II";color="#bd527e";style="rounded,dashed";penwidth=1.8; bgcolor="#ffedf5";
+"rl" [label="CARLA CLOSED-LOOP PPO\nCandidate selection + 8D residual\nEpisode cost / CVaR pilot",shape=box,style="rounded,filled",fillcolor="#ffedf5",color="#bd527e",penwidth=1.8,fontname="DejaVu Sans",fontsize=13,width=2.55,margin="0.22,0.18"];
+}
+subgraph cluster_eva {label="EVALUATION & IMPROVEMENT";color="#429269";style="rounded,dashed";penwidth=1.8; bgcolor="#e9f6ed";
+"eval" [label="INDEPENDENT BENCHMARKING\nNAVSIM PDMS/EPDMS · KITScenes ADE/FDE\nCARLA DS/SR · XAI · P95/P99 delay",shape=box,style="rounded,filled",fillcolor="#e9f6ed",color="#429269",penwidth=1.8,fontname="DejaVu Sans",fontsize=13,width=3.4,margin="0.22,0.18"];
+"fail" [label="FAILURE ANALYSIS & NEXT REVISION\nOcclusion · domain · risk tail\nNever train on held-out test routes",shape=box,style="rounded,filled",fillcolor="#e9f6ed",color="#429269",penwidth=1.8,fontname="DejaVu Sans",fontsize=13,width=2.55,margin="0.22,0.18"];
+}
+"data"->"expert" [color="#77619b",penwidth=2.0,arrowsize=.8,style=solid,constraint=true];
+"data"->"vis" [color="#77619b",penwidth=2.0,arrowsize=.8,style=solid,constraint=true];
+"expert"->"teacher" [color="#77619b",penwidth=2.0,arrowsize=.8,style=solid,constraint=true];
+"teacher"->"multi" [color="#77619b",penwidth=2.0,arrowsize=.8,style=solid,constraint=true];
+"vis"->"multi" [color="#77619b",penwidth=2.0,arrowsize=.8,style=solid,constraint=true];
+"multi"->"cache" [color="#77619b",penwidth=2.0,arrowsize=.8,style=solid,constraint=true];
+"vis"->"cache" [color="#77619b",penwidth=2.0,arrowsize=.8,style=solid,constraint=true];
+"cache"->"critic" [color="#77619b",penwidth=2.0,arrowsize=.8,style=solid,constraint=true];
+"cache"->"ranker" [color="#77619b",penwidth=2.0,arrowsize=.8,style=solid,constraint=true];
+"critic"->"rl" [color="#77619b",penwidth=2.0,arrowsize=.8,style=solid,constraint=true];
+"ranker"->"rl" [color="#77619b",penwidth=2.0,arrowsize=.8,style=solid,constraint=true];
+"rl"->"eval" [color="#77619b",penwidth=2.0,arrowsize=.8,style=solid,constraint=true];
+"eval"->"fail" [color="#77619b",penwidth=2.0,arrowsize=.8,style=solid,constraint=true];
+"fail"->"data" [color="#7b57b1",penwidth=2.0,arrowsize=.8,style=dashed,constraint=false,label="new TRAIN scenarios",fontsize=10,fontcolor="#47556c"];
+}

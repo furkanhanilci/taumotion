@@ -1,0 +1,62 @@
+digraph architecture {
+graph [rankdir=LR,bgcolor="white",pad="0.4",nodesep=".5",ranksep=".85",splines=polyline,compound=true,labelloc="t",labeljust="l",label="τMOTION  |  Final Online Driving Architecture\nv1.2 · Same 24 main modules · New small Safety Critic inside M10 · Multi-rate with feedback",fontname="DejaVu Sans",fontsize=26,fontcolor="#61268c",size="30,15",ratio=auto];
+node [fontname="DejaVu Sans"];
+edge [fontname="DejaVu Sans"];
+subgraph cluster_in {label="INPUT & PERCEPTION";color="#5284c7";style="rounded,dashed";penwidth=1.8; bgcolor="#eaf2ff";
+"i" [label="M00–M01  INPUTS & SYNCHRONIZATION\nCameras · ego state · route\nCalibration · data privilege · t0/AoI",shape=box,style="rounded,filled",fillcolor="#eaf2ff",color="#5284c7",penwidth=1.8,fontname="DejaVu Sans",fontsize=13,width=3.1,margin="0.22,0.18"];
+"e" [label="M02 / M23  INDEPENDENT EVIDENCE\nBEV, 3D actor tracks, drivable area\nForecast, occlusion, observation age",shape=box,style="rounded,filled",fillcolor="#eaf2ff",color="#5284c7",penwidth=1.8,fontname="DejaVu Sans",fontsize=13,width=3.05,margin="0.22,0.18"];
+}
+subgraph cluster_sem {label="REASONING & EVIDENCE";color="#8452b0";style="rounded,dashed";penwidth=1.8; bgcolor="#f1eaff";
+"vlm" [label="M03  VISION–LANGUAGE REASONING\nScene semantics · rules · intent",shape=box,style="rounded,filled",fillcolor="#f1eaff",color="#8452b0",penwidth=1.8,fontname="DejaVu Sans",fontsize=13,width=2.55,margin="0.22,0.18"];
+"cot" [label="M04–M05  CoT + HORIZON REASONING\nActor, hazard, cause, action, 0–4s",shape=box,style="rounded,filled",fillcolor="#f1eaff",color="#8452b0",penwidth=1.8,fontname="DejaVu Sans",fontsize=13,width=2.55,margin="0.22,0.18"];
+"ground" [label="M06  CLAIM / VISIBILITY GROUNDING\nSupported / contradicted / unknown\nOcclusion, uncertainty, calibration",shape=box,style="rounded,filled",fillcolor="#f1eaff",color="#8452b0",penwidth=1.8,fontname="DejaVu Sans",fontsize=13,width=3.0,margin="0.22,0.18"];
+}
+subgraph cluster_plan {label="CANDIDATE GENERATION";color="#429269";style="rounded,dashed";penwidth=1.8; bgcolor="#e9f6ed";
+"a" [label="M07  FLOW-BASED PLANNER\nFrozen model · native 5s horizon",shape=box,style="rounded,filled",fillcolor="#e9f6ed",color="#429269",penwidth=1.8,fontname="DejaVu Sans",fontsize=13,width=2.55,margin="0.22,0.18"];
+"b" [label="M08  DIFFUSION PLANNER\nFrozen model · native 4s horizon",shape=box,style="rounded,filled",fillcolor="#e9f6ed",color="#429269",penwidth=1.8,fontname="DejaVu Sans",fontsize=13,width=2.55,margin="0.22,0.18"];
+"pool" [label="M09  CANONICAL CANDIDATE POOL\n4s / 0.1s · K=6 (3+3)\nKeep native input/seed/horizon metadata",shape=box,style="rounded,filled",fillcolor="#e9f6ed",color="#429269",penwidth=1.8,fontname="DejaVu Sans",fontsize=13,width=3.0,margin="0.22,0.18"];
+}
+subgraph cluster_crit {label="NEW v1.2 SAFETY LAYER";color="#ca943a";style="rounded,dashed";penwidth=1.8; bgcolor="#fff2d9";
+"feature" [label="M10-a  PHYSICAL CANDIDATE FEATURES\nTTC · area · progress · comfort\nMPC feasibility proxy",shape=box,style="rounded,filled",fillcolor="#fff2d9",color="#ca943a",penwidth=1.8,fontname="DejaVu Sans",fontsize=13,width=3.0,margin="0.22,0.18"];
+"critic" [label="M10-b  LEARNED SAFETY CRITIC\nNC / DAC / TTC / DDC / EP\nComfort · feasibility · calibration",shape=box,style="rounded,filled",fillcolor="#fff2d9",color="#ca943a",penwidth=1.8,fontname="DejaVu Sans",fontsize=13,width=3.15,margin="0.22,0.18"];
+}
+subgraph cluster_policy {label="LEARNED DECISION";color="#bd527e";style="rounded,dashed";penwidth=1.8; bgcolor="#ffedf5";
+"rl" [label="M11  RISK-AWARE RL SELECTOR\nCandidate attention + GRU · PPO/CVaR\nDiscrete candidate j · reward/risk",shape=box,style="rounded,filled",fillcolor="#ffedf5",color="#bd527e",penwidth=1.8,fontname="DejaVu Sans",fontsize=13,width=3.0,margin="0.22,0.18"];
+"res" [label="M12  8-D BOUNDED RESIDUAL\n4 Δv + 4 Δd knots; smooth reference",shape=box,style="rounded,filled",fillcolor="#ffedf5",color="#bd527e",penwidth=1.8,fontname="DejaVu Sans",fontsize=13,width=2.55,margin="0.22,0.18"];
+}
+subgraph cluster_exec {label="PHYSICAL EXECUTION";color="#429269";style="rounded,dashed";penwidth=1.8; bgcolor="#e9f6ed";
+"safe" [label="M13  SAFETY / FEASIBILITY SUPERVISOR\nObstacle, road, dynamics, freshness",shape=box,style="rounded,filled",fillcolor="#fff2d9",color="#ca943a",penwidth=1.8,fontname="DejaVu Sans",fontsize=13,width=2.55,margin="0.22,0.18"];
+"nmpc" [label="M14  DYNAMIC NMPC\nVehicle model + OCP 4s / 40 nodes\nTarget: 20 Hz / 50ms critical path",shape=box,style="rounded,filled",fillcolor="#e9f6ed",color="#429269",penwidth=1.8,fontname="DejaVu Sans",fontsize=13,width=3.1,margin="0.22,0.18"];
+"gate" [label="M22  INDEPENDENT DEADLINE GUARDIAN\nLate result / stale ID / fallback",shape=box,style="rounded,filled",fillcolor="#e9f6ed",color="#429269",penwidth=1.8,fontname="DejaVu Sans",fontsize=13,width=2.55,margin="0.22,0.18"];
+"act" [label="M15  SINGLE VEHICLE COMMAND WRITER\nSteering + throttle + brake; executed action",shape=box,style="rounded,filled",fillcolor="#edf1f8",color="#7089a2",penwidth=1.8,fontname="DejaVu Sans",fontsize=13,width=2.55,margin="0.22,0.18"];
+}
+subgraph cluster_support {label="CROSS-CUTTING SERVICES";color="#7089a2";style="rounded,dashed";penwidth=1.8; bgcolor="#edf1f8";
+"runtime" [label="M16  ASYNCHRONOUS SCHEDULER\nP0–P3 · queues · AoI · GPU budget",shape=box,style="rounded,filled",fillcolor="#edf1f8",color="#7089a2",penwidth=1.8,fontname="DejaVu Sans",fontsize=13,width=3.0,margin="0.22,0.18"];
+"trace" [label="M17–M19  TRACE / XAI / BENCHMARK\nRaw proposal → approval → executed action\nPaired counterfactual evaluation",shape=box,style="rounded,filled",fillcolor="#edf1f8",color="#7089a2",penwidth=1.8,fontname="DejaVu Sans",fontsize=13,width=3.1,margin="0.22,0.18"];
+}
+"i"->"e" [color="#77619b",penwidth=2.0,arrowsize=.8,style=solid,constraint=true];
+"i"->"vlm" [color="#77619b",penwidth=2.0,arrowsize=.8,style=solid,constraint=true];
+"vlm"->"cot" [color="#77619b",penwidth=2.0,arrowsize=.8,style=solid,constraint=true];
+"e"->"ground" [color="#77619b",penwidth=2.0,arrowsize=.8,style=solid,constraint=true];
+"cot"->"ground" [color="#77619b",penwidth=2.0,arrowsize=.8,style=solid,constraint=true];
+"i"->"a" [color="#77619b",penwidth=2.0,arrowsize=.8,style=solid,constraint=true];
+"i"->"b" [color="#77619b",penwidth=2.0,arrowsize=.8,style=solid,constraint=true];
+"a"->"pool" [color="#77619b",penwidth=2.0,arrowsize=.8,style=solid,constraint=true];
+"b"->"pool" [color="#77619b",penwidth=2.0,arrowsize=.8,style=solid,constraint=true];
+"pool"->"feature" [color="#77619b",penwidth=2.0,arrowsize=.8,style=solid,constraint=true];
+"feature"->"critic" [color="#77619b",penwidth=2.0,arrowsize=.8,style=solid,constraint=true];
+"ground"->"critic" [color="#77619b",penwidth=2.0,arrowsize=.8,style=solid,constraint=true];
+"critic"->"rl" [color="#77619b",penwidth=2.0,arrowsize=.8,style=solid,constraint=true];
+"ground"->"rl" [color="#77619b",penwidth=2.0,arrowsize=.8,style=solid,constraint=true];
+"rl"->"res" [color="#77619b",penwidth=2.0,arrowsize=.8,style=solid,constraint=true];
+"res"->"safe" [color="#77619b",penwidth=2.0,arrowsize=.8,style=solid,constraint=true];
+"safe"->"nmpc" [color="#77619b",penwidth=2.0,arrowsize=.8,style=solid,constraint=true];
+"nmpc"->"gate" [color="#77619b",penwidth=2.0,arrowsize=.8,style=solid,constraint=true];
+"gate"->"act" [color="#77619b",penwidth=2.0,arrowsize=.8,style=solid,constraint=true];
+"nmpc"->"rl" [color="#ad88ce",penwidth=2.0,arrowsize=.8,style=dashed,constraint=false,label="prior control feedback",fontsize=10,fontcolor="#47556c"];
+"act"->"i" [color="#8060ab",penwidth=2.0,arrowsize=.8,style=dashed,constraint=false,label="new observation",fontsize=10,fontcolor="#47556c"];
+"runtime"->"gate" [color="#6c85a8",penwidth=2.0,arrowsize=.8,style=dashed,constraint=false,label="deadline",fontsize=10,fontcolor="#47556c"];
+"runtime"->"critic" [color="#6c85a8",penwidth=2.0,arrowsize=.8,style=dashed,constraint=false,label="freshness",fontsize=10,fontcolor="#47556c"];
+"act"->"trace" [color="#6c85a8",penwidth=2.0,arrowsize=.8,style=dashed,constraint=false];
+"rl"->"trace" [color="#6c85a8",penwidth=2.0,arrowsize=.8,style=dashed,constraint=false];
+}

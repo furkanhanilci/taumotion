@@ -1,0 +1,325 @@
+{
+  "release": "1.3.1",
+  "scope": "D0_DOCUMENTATION_ONLY",
+  "all_documentation_checks_passed": true,
+  "count": 63,
+  "passed": 63,
+  "runtime_status": "NOT_RUN",
+  "checks": [
+    {
+      "check": "Canonical 24 modules",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Effective field: name",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Effective field: necessity",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Effective field: input",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Effective field: output",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Effective field: source",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Effective field: reuse",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Effective field: bridge",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Effective field: training",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Effective field: failure",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Effective field: acceptance",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Effective field: experiments",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "M10 critic is in effective training and output",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "54 dependency payload records",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "52 unique directed pairs",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Dependency IDs and endpoints valid",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Every edge scope explicit",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Offline payload scopes enforced",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Offline cache cannot be an online critic input",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "M22 is sole actuator authorizer",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Full graph covers every dependency",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Master TR current modules and effective fields",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Master EN all module rows",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Catalogue current effective fields",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "CSV mirrors current effective fields",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Original RQ1–RQ9 retained",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "E1–E24 plus E10-H retained",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "N0–N9 and C0–C10 retained",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "No scope reduction",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Exactly two mandatory online planners",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "R1–R5 runtime levels NOT_RUN",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "R6–R9 runtime levels NOT_RUN",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "All module runtime evidence empty",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "All six user planning values retained",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Forecast is not measured and empirical basis absent",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Approved logo signature and exact SHA256",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "README.md uses approved original and current diagram",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "README.tr.md uses approved original and current diagram",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Current figure builder does not redraw logo",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "JSON parses: architecture_edges.json",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "JSON parses: benchmark_expectations_v1_3.json",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "JSON parses: components.json",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "JSON parses: coverage.json",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "JSON parses: design_decisions_v1_3.json",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "JSON parses: design_reference.json",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "JSON parses: local_archive_inventory.json",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "JSON parses: model_selections.json",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "JSON parses: release.json",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "JSON parses: runtime_profiles.json",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "JSON parses: source_pins.json",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "JSON parses: synthetic_contract_example.json",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "JSON parses: validation_registry.json",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "All source pins are full commit SHAs",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "SVG XML parses",
+      "passed": true,
+      "detail": "24 SVG files; []"
+    },
+    {
+      "check": "Current figure variants: main_architecture",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Current figure variants: runtime_contract",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Current figure variants: learning_and_evidence",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Markdown links and embedded images resolve in publication",
+      "passed": true,
+      "detail": "[]"
+    },
+    {
+      "check": "Python build and validation tools parse",
+      "passed": true,
+      "detail": "[]"
+    },
+    {
+      "check": "Current PDF builder never slices code lines",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Inactive CI template targets current validator",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "PDF opens, current release, full module coverage",
+      "passed": true,
+      "detail": "71 pages"
+    },
+    {
+      "check": "PDF contains reviewed contracts and sources",
+      "passed": true,
+      "detail": ""
+    }
+  ]
+}

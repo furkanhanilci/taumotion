@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="800" viewBox="0 0 800 800" role="img"><title>τMOTION — tau_dark</title>
+<defs><linearGradient id="g0" gradientUnits="userSpaceOnUse" x1="130" y1="155" x2="560" y2="655"><stop offset="0.000" stop-color="#79f5d5"/><stop offset="0.500" stop-color="#24bfcc"/><stop offset="1.000" stop-color="#4c67f2"/></linearGradient></defs>
+<path d="M 125 215 C 170 174 210 155 265 155 L 686 155 L 630 247 L 490 247 L 445 473 C 429 551 464 578 543 542 L 585 522 L 563 626 C 510 655 448 671 396 649 C 335 624 307 574 324 490 L 375 247 L 233 247 C 194 247 163 260 133 281 Z " fill="url(#g0)" stroke="none" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 150 213 C 189 186 225 176 267 176 L 647 176 L 625 210 L 466 210 L 407 493 C 388 581 430 621 500 603 L 546 583 L 539 613 C 480 639 429 638 395 610 C 365 585 359 552 372 488 L 431 210 L 252 210 C 210 210 180 224 151 241 Z " fill="#c7fff0" stroke="none" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 184 197 C 210 185 237 181 268 181 L 635 181" fill="none" stroke="#f4fffc" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="265" y="730" fill="#9bb1c6" font-family="DejaVu Sans,sans-serif" font-size="32" font-weight="700" letter-spacing="12">MOTION</text>
+</svg>

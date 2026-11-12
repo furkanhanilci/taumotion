@@ -1,0 +1,146 @@
+{
+  "kind": "architecture_specification_not_validated_runtime",
+  "version": "1.1",
+  "date": "2026-11-11",
+  "scope": "all original RQ1-RQ9, E1-E12 plus E10-H/E13-E15 retained",
+  "planner_pool": {
+    "A": "Qwen/Qwen-Drive-1.0-4B + planner-rl (reasoning mode)",
+    "B": "owl10/ReCogDrive-VLM-2B + owl10/ReCogDrive-2B-RL",
+    "freeze_weights": true,
+    "K_total": 6,
+    "K_A": 3,
+    "K_B": 3,
+    "sweep_K": [
+      2,
+      6,
+      12
+    ],
+    "native_horizon_A_s": 5,
+    "native_horizon_B_s": 4,
+    "common_horizon_s": 4,
+    "common_dt_s": 0.1,
+    "extrapolate": false
+  },
+  "semantics": {
+    "main": "Qwen/Qwen-Drive-1.0-4B root VLM (Qwen3.5-based driving adaptation)",
+    "comparison": "Qwen3.8-27B",
+    "horizons_s": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "hidden_dim": 256,
+    "grounding_statuses": [
+      "SUPPORTED",
+      "CONTRADICTED",
+      "UNKNOWN",
+      "CONFLICT",
+      "STALE"
+    ],
+    "unknown_is_false": false
+  },
+  "evidence": {
+    "carla": "Bench2DriveZoo UniAD-Tiny uniad/vad-0.0.4",
+    "real_logs": "UniAD compatible backend; sensor/domain validation required",
+    "traffic_light": "Autoware ROI HSV reference / CNN comparison",
+    "native_forecast_times_required": true,
+    "assume_covariance": false
+  },
+  "policy": {
+    "algorithm": "TorchRL PPO + custom conditional hybrid action + CVaR extension",
+    "candidate_encoder": "shared attention",
+    "memory": "GRU",
+    "residual_knots": 4,
+    "residual_channels": [
+      "speed_offset_mps",
+      "lateral_offset_m"
+    ],
+    "initial_abs_bounds": [
+      2,
+      0.5
+    ],
+    "bounds_status": "pilot settings, not validated safe limits",
+    "training_seeds_target": 5
+  },
+  "risk": {
+    "alpha": 0.9,
+    "alpha_sweep": [
+      0.9,
+      0.95
+    ],
+    "budget_d": null,
+    "budget_status": "set from train pilot before test",
+    "eta_learning_rate": null,
+    "lambda_learning_rate": null,
+    "tail_episode_target": 50,
+    "guarantee": "none"
+  },
+  "control": {
+    "engine": "acados/CasADi SQP_RTI HPIPM",
+    "model": "dynamic bicycle with low-speed transition",
+    "carla_dt_s": 0.05,
+    "command_hz": 20,
+    "ocp_dt_s": 0.1,
+    "ocp_nodes": 40,
+    "ocp_horizon_s": 4,
+    "deadline_ms": 50,
+    "vehicle_parameters": null,
+    "parameters_status": "blueprint-specific identification required",
+    "mpc_top_n_sweep": [
+      1,
+      3,
+      6
+    ],
+    "deadline_scope": "entire_critical_control_path",
+    "solver_feedback_budget_ms": 32,
+    "budget_status": "illustrative_pilot_allocation_not_measured",
+    "guardian": "M22 separate process with single-writer M15",
+    "solver_variants": [
+      "SQP_RTI",
+      "AS-RTI supported acados implementation"
+    ],
+    "solver_timeout_assumption": "Do not assume timeout_max_time covers SQP_RTI"
+  },
+  "scheduling": {
+    "profiles": [
+      "P0_sync_teacher_dual",
+      "P1_async_teacher_dual",
+      "P2_async_student_dual",
+      "P3_conditional_call"
+    ],
+    "initial_max_semantic_age_s": 0.5,
+    "initial_max_candidate_age_s": 0.5,
+    "min_remaining_horizon_s": 2,
+    "age_status": "hypothesis to sweep E9/E12",
+    "hardware_target": "2x NVIDIA A5000; memory/latency not measured",
+    "clock_separation": [
+      "simulation",
+      "wall",
+      "injected_operational_delay"
+    ],
+    "evidence_propagation": "M23",
+    "max_pending_requests_per_worker": 1,
+    "late_results": "reject by episode/generation/deadline",
+    "shared_vlm_weights": "M03 and M07 endpoints in same native VLM service where compatible",
+    "operating_frequencies_status": "NOT_SELECTED_UNTIL_PROFILED"
+  },
+  "evaluation": {
+    "navsim_v1": "v1.1",
+    "navsim_v2": "v2.1.2",
+    "carla": "0.9.15",
+    "bench2drive": "0.0.4",
+    "primary_comparison": [
+      "C8",
+      "C6"
+    ],
+    "result_status": "NO_EXPERIMENTS_RUN"
+  },
+  "weights": {
+    "A_sha256": null,
+    "B_sha256": null,
+    "evidence_sha256": null,
+    "semantic_sha256": null
+  }
+}

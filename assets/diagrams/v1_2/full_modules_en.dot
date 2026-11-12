@@ -1,0 +1,72 @@
+digraph architecture {
+graph [rankdir=LR,bgcolor="white",pad="0.4",nodesep=".5",ranksep=".85",splines=polyline,compound=true,labelloc="t",labeljust="l",label="τMOTION  |  Module Interface Map M00–M23\nExplicit interfaces, not black boxes. Dashed edges: support/training/feedback",fontname="DejaVu Sans",fontsize=26,fontcolor="#61268c",size="30,17",ratio=auto];
+node [fontname="DejaVu Sans"];
+edge [fontname="DejaVu Sans"];
+subgraph cluster_input {label="Input/evidence";color="#5284c7";style="rounded,dashed";penwidth=1.8; bgcolor="#eaf2ff";
+"M00" [label="M00  Data privilege",shape=box,style="rounded,filled",fillcolor="#eaf2ff",color="#5284c7",penwidth=1.8,fontname="DejaVu Sans",fontsize=12,width=2.65,margin="0.22,0.18"];
+"M01" [label="M01  Synchronization",shape=box,style="rounded,filled",fillcolor="#eaf2ff",color="#5284c7",penwidth=1.8,fontname="DejaVu Sans",fontsize=12,width=2.65,margin="0.22,0.18"];
+"M02" [label="M02  Independent evidence",shape=box,style="rounded,filled",fillcolor="#eaf2ff",color="#5284c7",penwidth=1.8,fontname="DejaVu Sans",fontsize=12,width=2.65,margin="0.22,0.18"];
+"M23" [label="M23  Evidence time propagation",shape=box,style="rounded,filled",fillcolor="#eaf2ff",color="#5284c7",penwidth=1.8,fontname="DejaVu Sans",fontsize=12,width=2.65,margin="0.22,0.18"];
+}
+subgraph cluster_sem {label="Semantics/XAI";color="#8452b0";style="rounded,dashed";penwidth=1.8; bgcolor="#f1eaff";
+"M03" [label="M03  Semantic VLM",shape=box,style="rounded,filled",fillcolor="#f1eaff",color="#8452b0",penwidth=1.8,fontname="DejaVu Sans",fontsize=12,width=2.65,margin="0.22,0.18"];
+"M04" [label="M04  Structured reasoning",shape=box,style="rounded,filled",fillcolor="#f1eaff",color="#8452b0",penwidth=1.8,fontname="DejaVu Sans",fontsize=12,width=2.65,margin="0.22,0.18"];
+"M05" [label="M05  Horizon reasoning",shape=box,style="rounded,filled",fillcolor="#f1eaff",color="#8452b0",penwidth=1.8,fontname="DejaVu Sans",fontsize=12,width=2.65,margin="0.22,0.18"];
+"M06" [label="M06  Claim grounding",shape=box,style="rounded,filled",fillcolor="#f1eaff",color="#8452b0",penwidth=1.8,fontname="DejaVu Sans",fontsize=12,width=2.65,margin="0.22,0.18"];
+}
+subgraph cluster_plan {label="Motion proposal";color="#429269";style="rounded,dashed";penwidth=1.8; bgcolor="#e9f6ed";
+"M07" [label="M07  Flow planner",shape=box,style="rounded,filled",fillcolor="#e9f6ed",color="#429269",penwidth=1.8,fontname="DejaVu Sans",fontsize=12,width=2.65,margin="0.22,0.18"];
+"M08" [label="M08  Diffusion planner",shape=box,style="rounded,filled",fillcolor="#e9f6ed",color="#429269",penwidth=1.8,fontname="DejaVu Sans",fontsize=12,width=2.65,margin="0.22,0.18"];
+"M09" [label="M09  Canonical candidates",shape=box,style="rounded,filled",fillcolor="#e9f6ed",color="#429269",penwidth=1.8,fontname="DejaVu Sans",fontsize=12,width=2.65,margin="0.22,0.18"];
+}
+subgraph cluster_learner {label="Risk & RL";color="#bd527e";style="rounded,dashed";penwidth=1.8; bgcolor="#ffedf5";
+"M10" [label="M10  Features + NEW safety critic",shape=box,style="rounded,filled",fillcolor="#ffedf5",color="#bd527e",penwidth=1.8,fontname="DejaVu Sans",fontsize=12,width=2.65,margin="0.22,0.18"];
+"M11" [label="M11  Risk-aware RL selection",shape=box,style="rounded,filled",fillcolor="#ffedf5",color="#bd527e",penwidth=1.8,fontname="DejaVu Sans",fontsize=12,width=2.65,margin="0.22,0.18"];
+"M12" [label="M12  Bounded 8D residual",shape=box,style="rounded,filled",fillcolor="#ffedf5",color="#bd527e",penwidth=1.8,fontname="DejaVu Sans",fontsize=12,width=2.65,margin="0.22,0.18"];
+}
+subgraph cluster_ctl {label="Physical control";color="#429269";style="rounded,dashed";penwidth=1.8; bgcolor="#e9f6ed";
+"M13" [label="M13  Feasibility supervisor",shape=box,style="rounded,filled",fillcolor="#e9f6ed",color="#429269",penwidth=1.8,fontname="DejaVu Sans",fontsize=12,width=2.65,margin="0.22,0.18"];
+"M14" [label="M14  Dynamic NMPC",shape=box,style="rounded,filled",fillcolor="#e9f6ed",color="#429269",penwidth=1.8,fontname="DejaVu Sans",fontsize=12,width=2.65,margin="0.22,0.18"];
+"M22" [label="M22  Deadline guardian",shape=box,style="rounded,filled",fillcolor="#e9f6ed",color="#429269",penwidth=1.8,fontname="DejaVu Sans",fontsize=12,width=2.65,margin="0.22,0.18"];
+"M15" [label="M15  Single command writer",shape=box,style="rounded,filled",fillcolor="#e9f6ed",color="#429269",penwidth=1.8,fontname="DejaVu Sans",fontsize=12,width=2.65,margin="0.22,0.18"];
+}
+subgraph cluster_sup {label="Support/training/benchmark";color="#7089a2";style="rounded,dashed";penwidth=1.8; bgcolor="#edf1f8";
+"M16" [label="M16  Scheduling / freshness",shape=box,style="rounded,filled",fillcolor="#edf1f8",color="#7089a2",penwidth=1.8,fontname="DejaVu Sans",fontsize=12,width=2.65,margin="0.22,0.18"];
+"M17" [label="M17  Trace and versions",shape=box,style="rounded,filled",fillcolor="#edf1f8",color="#7089a2",penwidth=1.8,fontname="DejaVu Sans",fontsize=12,width=2.65,margin="0.22,0.18"];
+"M18" [label="M18  Counterfactual XAI",shape=box,style="rounded,filled",fillcolor="#edf1f8",color="#7089a2",penwidth=1.8,fontname="DejaVu Sans",fontsize=12,width=2.65,margin="0.22,0.18"];
+"M19" [label="M19  Benchmark / statistics",shape=box,style="rounded,filled",fillcolor="#edf1f8",color="#7089a2",penwidth=1.8,fontname="DejaVu Sans",fontsize=12,width=2.65,margin="0.22,0.18"];
+"M20" [label="M20  Baselines / expert",shape=box,style="rounded,filled",fillcolor="#edf1f8",color="#7089a2",penwidth=1.8,fontname="DejaVu Sans",fontsize=12,width=2.65,margin="0.22,0.18"];
+"M21" [label="M21  Data / multi-target training",shape=box,style="rounded,filled",fillcolor="#edf1f8",color="#7089a2",penwidth=1.8,fontname="DejaVu Sans",fontsize=12,width=2.65,margin="0.22,0.18"];
+}
+"M00"->"M01" [color="#77619b",penwidth=2.0,arrowsize=.8,style=solid,constraint=true];
+"M01"->"M02" [color="#77619b",penwidth=2.0,arrowsize=.8,style=solid,constraint=true];
+"M02"->"M23" [color="#77619b",penwidth=2.0,arrowsize=.8,style=solid,constraint=true];
+"M01"->"M03" [color="#77619b",penwidth=2.0,arrowsize=.8,style=solid,constraint=true];
+"M03"->"M04" [color="#77619b",penwidth=2.0,arrowsize=.8,style=solid,constraint=true];
+"M04"->"M05" [color="#77619b",penwidth=2.0,arrowsize=.8,style=solid,constraint=true];
+"M02"->"M06" [color="#77619b",penwidth=2.0,arrowsize=.8,style=solid,constraint=true];
+"M23"->"M06" [color="#77619b",penwidth=2.0,arrowsize=.8,style=solid,constraint=true];
+"M05"->"M06" [color="#77619b",penwidth=2.0,arrowsize=.8,style=solid,constraint=true];
+"M01"->"M07" [color="#77619b",penwidth=2.0,arrowsize=.8,style=solid,constraint=true];
+"M01"->"M08" [color="#77619b",penwidth=2.0,arrowsize=.8,style=solid,constraint=true];
+"M07"->"M09" [color="#77619b",penwidth=2.0,arrowsize=.8,style=solid,constraint=true];
+"M08"->"M09" [color="#77619b",penwidth=2.0,arrowsize=.8,style=solid,constraint=true];
+"M09"->"M10" [color="#77619b",penwidth=2.0,arrowsize=.8,style=solid,constraint=true];
+"M06"->"M10" [color="#77619b",penwidth=2.0,arrowsize=.8,style=solid,constraint=true];
+"M10"->"M11" [color="#77619b",penwidth=2.0,arrowsize=.8,style=solid,constraint=true];
+"M06"->"M11" [color="#77619b",penwidth=2.0,arrowsize=.8,style=solid,constraint=true];
+"M11"->"M12" [color="#77619b",penwidth=2.0,arrowsize=.8,style=solid,constraint=true];
+"M12"->"M13" [color="#77619b",penwidth=2.0,arrowsize=.8,style=solid,constraint=true];
+"M13"->"M14" [color="#77619b",penwidth=2.0,arrowsize=.8,style=solid,constraint=true];
+"M14"->"M22" [color="#77619b",penwidth=2.0,arrowsize=.8,style=solid,constraint=true];
+"M22"->"M15" [color="#77619b",penwidth=2.0,arrowsize=.8,style=solid,constraint=true];
+"M14"->"M11" [color="#8a6bb8",penwidth=2.0,arrowsize=.8,style=dashed,constraint=false];
+"M15"->"M01" [color="#8a6bb8",penwidth=2.0,arrowsize=.8,style=dashed,constraint=false];
+"M16"->"M22" [color="#8a6bb8",penwidth=2.0,arrowsize=.8,style=dashed,constraint=false];
+"M15"->"M17" [color="#8a6bb8",penwidth=2.0,arrowsize=.8,style=dashed,constraint=false];
+"M17"->"M18" [color="#8a6bb8",penwidth=2.0,arrowsize=.8,style=dashed,constraint=false];
+"M17"->"M19" [color="#8a6bb8",penwidth=2.0,arrowsize=.8,style=dashed,constraint=false];
+"M20"->"M19" [color="#8a6bb8",penwidth=2.0,arrowsize=.8,style=dashed,constraint=false];
+"M21"->"M10" [color="#8a6bb8",penwidth=2.0,arrowsize=.8,style=dashed,constraint=false];
+"M21"->"M06" [color="#8a6bb8",penwidth=2.0,arrowsize=.8,style=dashed,constraint=false];
+}

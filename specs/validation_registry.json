@@ -1,0 +1,177 @@
+{
+  "version": "1.3.1",
+  "document_validation_report": "../reports/documentation_checks.json",
+  "runtime_claim": "NO_RUNTIME_RESULTS",
+  "levels": {
+    "R1_NATIVE_INFERENCE": {
+      "status": "NOT_RUN",
+      "evidence": []
+    },
+    "R2_ADAPTER_PARITY": {
+      "status": "NOT_RUN",
+      "evidence": []
+    },
+    "R3_RUNTIME_INTEGRATION": {
+      "status": "NOT_RUN",
+      "evidence": []
+    },
+    "R4_CLOSED_LOOP": {
+      "status": "NOT_RUN",
+      "evidence": []
+    },
+    "R5_REAL_TIME_PROFILE": {
+      "status": "NOT_RUN",
+      "evidence": []
+    }
+  },
+  "components": {
+    "M00": {
+      "specification": "DEFINED",
+      "runtime": "NOT_RUN",
+      "evidence": []
+    },
+    "M01": {
+      "specification": "DEFINED",
+      "runtime": "NOT_RUN",
+      "evidence": []
+    },
+    "M02": {
+      "specification": "DEFINED",
+      "runtime": "NOT_RUN",
+      "evidence": []
+    },
+    "M03": {
+      "specification": "DEFINED",
+      "runtime": "NOT_RUN",
+      "evidence": []
+    },
+    "M04": {
+      "specification": "DEFINED",
+      "runtime": "NOT_RUN",
+      "evidence": []
+    },
+    "M05": {
+      "specification": "DEFINED",
+      "runtime": "NOT_RUN",
+      "evidence": []
+    },
+    "M06": {
+      "specification": "DEFINED",
+      "runtime": "NOT_RUN",
+      "evidence": []
+    },
+    "M07": {
+      "specification": "DEFINED",
+      "runtime": "NOT_RUN",
+      "evidence": []
+    },
+    "M08": {
+      "specification": "DEFINED",
+      "runtime": "NOT_RUN",
+      "evidence": []
+    },
+    "M09": {
+      "specification": "DEFINED",
+      "runtime": "NOT_RUN",
+      "evidence": []
+    },
+    "M10": {
+      "specification": "DEFINED",
+      "runtime": "NOT_RUN",
+      "evidence": []
+    },
+    "M11": {
+      "specification": "DEFINED",
+      "runtime": "NOT_RUN",
+      "evidence": []
+    },
+    "M12": {
+      "specification": "DEFINED",
+      "runtime": "NOT_RUN",
+      "evidence": []
+    },
+    "M13": {
+      "specification": "DEFINED",
+      "runtime": "NOT_RUN",
+      "evidence": []
+    },
+    "M14": {
+      "specification": "DEFINED",
+      "runtime": "NOT_RUN",
+      "evidence": []
+    },
+    "M15": {
+      "specification": "DEFINED",
+      "runtime": "NOT_RUN",
+      "evidence": []
+    },
+    "M16": {
+      "specification": "DEFINED",
+      "runtime": "NOT_RUN",
+      "evidence": []
+    },
+    "M17": {
+      "specification": "DEFINED",
+      "runtime": "NOT_RUN",
+      "evidence": []
+    },
+    "M18": {
+      "specification": "DEFINED",
+      "runtime": "NOT_RUN",
+      "evidence": []
+    },
+    "M19": {
+      "specification": "DEFINED",
+      "runtime": "NOT_RUN",
+      "evidence": []
+    },
+    "M20": {
+      "specification": "DEFINED",
+      "runtime": "NOT_RUN",
+      "evidence": []
+    },
+    "M21": {
+      "specification": "DEFINED",
+      "runtime": "NOT_RUN",
+      "evidence": []
+    },
+    "M22": {
+      "specification": "DEFINED",
+      "runtime": "NOT_RUN",
+      "evidence": []
+    },
+    "M23": {
+      "specification": "DEFINED",
+      "runtime": "NOT_RUN",
+      "evidence": []
+    }
+  },
+  "environment_observation": {
+    "gpu_target": "2x A5000 (user-specified)",
+    "probe": "nvidia-smi",
+    "result": "driver_unreachable_in_this_session",
+    "meaning": "No inference or GPU timing performed; not a hardware-fault diagnosis"
+  },
+  "v1_2_new": {
+    "D0_DOCUMENTATION": {
+      "status": "SEE_CURRENT_REPORT",
+      "report": "../reports/documentation_checks.json"
+    },
+    "R6_CRITIC_CALIBRATION": {
+      "status": "NOT_RUN",
+      "evidence": []
+    },
+    "R7_TEACHER_AND_VISIBILITY": {
+      "status": "NOT_RUN",
+      "evidence": []
+    },
+    "R8_STRONG_BASELINE_REPRODUCTION": {
+      "status": "NOT_RUN",
+      "evidence": []
+    },
+    "R9_COUNTERFACTUAL": {
+      "status": "NOT_RUN",
+      "evidence": []
+    }
+  }
+}

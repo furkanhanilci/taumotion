@@ -1,0 +1,62 @@
+digraph architecture {
+graph [rankdir=LR,bgcolor="white",pad="0.4",nodesep=".5",ranksep=".85",splines=polyline,compound=true,labelloc="t",labeljust="l",label="τMOTION  |  Nihai Çevrim İçi Sürüş Mimarisi\nv1.2 · Aynı 24 ana modül · M10 içinde yeni küçük Safety Critic · Birden çok hız ve geri besleme",fontname="DejaVu Sans",fontsize=26,fontcolor="#61268c",size="30,15",ratio=auto];
+node [fontname="DejaVu Sans"];
+edge [fontname="DejaVu Sans"];
+subgraph cluster_in {label="GİRDİ ve ALGILAMA";color="#5284c7";style="rounded,dashed";penwidth=1.8; bgcolor="#eaf2ff";
+"i" [label="M00–M01  GİRİŞ VE SENKRONİZASYON\nKameralar · ego durumu · rota\nKalibrasyon · kaynak izinleri · t0/AoI",shape=box,style="rounded,filled",fillcolor="#eaf2ff",color="#5284c7",penwidth=1.8,fontname="DejaVu Sans",fontsize=13,width=3.1,margin="0.22,0.18"];
+"e" [label="M02 / M23  BAĞIMSIZ KANIT\nBEV, 3B aktör izleri, yol alanı\nTahmin, örtülme, veri yaşı",shape=box,style="rounded,filled",fillcolor="#eaf2ff",color="#5284c7",penwidth=1.8,fontname="DejaVu Sans",fontsize=13,width=3.05,margin="0.22,0.18"];
+}
+subgraph cluster_sem {label="MUHAKEME ve KANIT";color="#8452b0";style="rounded,dashed";penwidth=1.8; bgcolor="#f1eaff";
+"vlm" [label="M03  GÖRSEL–DİL MUHAKEMESİ\nSahne bağlamı · kurallar · niyet",shape=box,style="rounded,filled",fillcolor="#f1eaff",color="#8452b0",penwidth=1.8,fontname="DejaVu Sans",fontsize=13,width=2.55,margin="0.22,0.18"];
+"cot" [label="M04–M05  CoT + ZAMANSAL MUHAKEME\nAktör, tehlike, neden, eylem, 0–4s",shape=box,style="rounded,filled",fillcolor="#f1eaff",color="#8452b0",penwidth=1.8,fontname="DejaVu Sans",fontsize=13,width=2.55,margin="0.22,0.18"];
+"ground" [label="M06  KANIT / GÖRÜNÜRLÜK\nDestekli / çelişkili / bilinmiyor\nÖrtülme, belirsizlik ve kalibrasyon",shape=box,style="rounded,filled",fillcolor="#f1eaff",color="#8452b0",penwidth=1.8,fontname="DejaVu Sans",fontsize=13,width=3.0,margin="0.22,0.18"];
+}
+subgraph cluster_plan {label="ADAY ÜRETİMİ";color="#429269";style="rounded,dashed";penwidth=1.8; bgcolor="#e9f6ed";
+"a" [label="M07  AKIŞ TABANLI PLANLAYICI\nDondurulmuş model · doğal 5s ufuk",shape=box,style="rounded,filled",fillcolor="#e9f6ed",color="#429269",penwidth=1.8,fontname="DejaVu Sans",fontsize=13,width=2.55,margin="0.22,0.18"];
+"b" [label="M08  DİFÜZYON PLANLAYICISI\nDondurulmuş model · doğal 4s ufuk",shape=box,style="rounded,filled",fillcolor="#e9f6ed",color="#429269",penwidth=1.8,fontname="DejaVu Sans",fontsize=13,width=2.55,margin="0.22,0.18"];
+"pool" [label="M09  ORTAK ADAY HAVUZU\n4s / 0,1s · K=6 (3+3)\nGirdi/seed/horizon metaverisi korunur",shape=box,style="rounded,filled",fillcolor="#e9f6ed",color="#429269",penwidth=1.8,fontname="DejaVu Sans",fontsize=13,width=3.0,margin="0.22,0.18"];
+}
+subgraph cluster_crit {label="YENİ v1.2 GÜVENLİK KATMANI";color="#ca943a";style="rounded,dashed";penwidth=1.8; bgcolor="#fff2d9";
+"feature" [label="M10-a  FİZİKSEL ADAY ÖZELLİKLERİ\nTTC · yol · ilerleme · konfor\nMPC uygunluk tahmini",shape=box,style="rounded,filled",fillcolor="#fff2d9",color="#ca943a",penwidth=1.8,fontname="DejaVu Sans",fontsize=13,width=3.0,margin="0.22,0.18"];
+"critic" [label="M10-b  ÖĞRENİLMİŞ GÜVENLİK CRITIC\nNC / DAC / TTC / DDC / EP\nKonfor · uygulanabilirlik · kalibrasyon",shape=box,style="rounded,filled",fillcolor="#fff2d9",color="#ca943a",penwidth=1.8,fontname="DejaVu Sans",fontsize=13,width=3.15,margin="0.22,0.18"];
+}
+subgraph cluster_policy {label="ÖĞRENİLMİŞ KARAR";color="#bd527e";style="rounded,dashed";penwidth=1.8; bgcolor="#ffedf5";
+"rl" [label="M11  RİSK DUYARLI RL SEÇİCİ\nAday dikkat + GRU · PPO/CVaR\nAyrık aday j · risk/ödül dengesi",shape=box,style="rounded,filled",fillcolor="#ffedf5",color="#bd527e",penwidth=1.8,fontname="DejaVu Sans",fontsize=13,width=3.0,margin="0.22,0.18"];
+"res" [label="M12  8 BOYUTLU ARTIK DÜZELTME\n4 Δv + 4 Δd düğümü; düzgün eğri",shape=box,style="rounded,filled",fillcolor="#ffedf5",color="#bd527e",penwidth=1.8,fontname="DejaVu Sans",fontsize=13,width=2.55,margin="0.22,0.18"];
+}
+subgraph cluster_exec {label="FİZİKSEL YÜRÜTME";color="#429269";style="rounded,dashed";penwidth=1.8; bgcolor="#e9f6ed";
+"safe" [label="M13  GÜVENLİK / UYGUNLUK\nEngel, yol, dinamik, zaman geçerliliği",shape=box,style="rounded,filled",fillcolor="#fff2d9",color="#ca943a",penwidth=1.8,fontname="DejaVu Sans",fontsize=13,width=2.55,margin="0.22,0.18"];
+"nmpc" [label="M14  DİNAMİK NMPC\nAraç modeli + OCP 4s / 40 aralık\nHedef: 20 Hz / 50ms kritik yol",shape=box,style="rounded,filled",fillcolor="#e9f6ed",color="#429269",penwidth=1.8,fontname="DejaVu Sans",fontsize=13,width=3.1,margin="0.22,0.18"];
+"gate" [label="M22  BAĞIMSIZ KOMUT GÖZETMENİ\nGeç sonuç / eski ID / fallback",shape=box,style="rounded,filled",fillcolor="#e9f6ed",color="#429269",penwidth=1.8,fontname="DejaVu Sans",fontsize=13,width=2.55,margin="0.22,0.18"];
+"act" [label="M15  TEK ARAÇ KOMUT YAZICISI\nDireksiyon + gaz + fren; gerçekleşen eylem",shape=box,style="rounded,filled",fillcolor="#edf1f8",color="#7089a2",penwidth=1.8,fontname="DejaVu Sans",fontsize=13,width=2.55,margin="0.22,0.18"];
+}
+subgraph cluster_support {label="YATAY SERVİSLER";color="#7089a2";style="rounded,dashed";penwidth=1.8; bgcolor="#edf1f8";
+"runtime" [label="M16  ASENKRON ZAMANLAYICI\nP0–P3 · kuyruk · AoI · GPU bütçesi",shape=box,style="rounded,filled",fillcolor="#edf1f8",color="#7089a2",penwidth=1.8,fontname="DejaVu Sans",fontsize=13,width=3.0,margin="0.22,0.18"];
+"trace" [label="M17–M19  İZ / XAI / BENCHMARK\nHam teklif → onay → gerçek eylem\nPaired karşı-olgusal değerlendirme",shape=box,style="rounded,filled",fillcolor="#edf1f8",color="#7089a2",penwidth=1.8,fontname="DejaVu Sans",fontsize=13,width=3.1,margin="0.22,0.18"];
+}
+"i"->"e" [color="#77619b",penwidth=2.0,arrowsize=.8,style=solid,constraint=true];
+"i"->"vlm" [color="#77619b",penwidth=2.0,arrowsize=.8,style=solid,constraint=true];
+"vlm"->"cot" [color="#77619b",penwidth=2.0,arrowsize=.8,style=solid,constraint=true];
+"e"->"ground" [color="#77619b",penwidth=2.0,arrowsize=.8,style=solid,constraint=true];
+"cot"->"ground" [color="#77619b",penwidth=2.0,arrowsize=.8,style=solid,constraint=true];
+"i"->"a" [color="#77619b",penwidth=2.0,arrowsize=.8,style=solid,constraint=true];
+"i"->"b" [color="#77619b",penwidth=2.0,arrowsize=.8,style=solid,constraint=true];
+"a"->"pool" [color="#77619b",penwidth=2.0,arrowsize=.8,style=solid,constraint=true];
+"b"->"pool" [color="#77619b",penwidth=2.0,arrowsize=.8,style=solid,constraint=true];
+"pool"->"feature" [color="#77619b",penwidth=2.0,arrowsize=.8,style=solid,constraint=true];
+"feature"->"critic" [color="#77619b",penwidth=2.0,arrowsize=.8,style=solid,constraint=true];
+"ground"->"critic" [color="#77619b",penwidth=2.0,arrowsize=.8,style=solid,constraint=true];
+"critic"->"rl" [color="#77619b",penwidth=2.0,arrowsize=.8,style=solid,constraint=true];
+"ground"->"rl" [color="#77619b",penwidth=2.0,arrowsize=.8,style=solid,constraint=true];
+"rl"->"res" [color="#77619b",penwidth=2.0,arrowsize=.8,style=solid,constraint=true];
+"res"->"safe" [color="#77619b",penwidth=2.0,arrowsize=.8,style=solid,constraint=true];
+"safe"->"nmpc" [color="#77619b",penwidth=2.0,arrowsize=.8,style=solid,constraint=true];
+"nmpc"->"gate" [color="#77619b",penwidth=2.0,arrowsize=.8,style=solid,constraint=true];
+"gate"->"act" [color="#77619b",penwidth=2.0,arrowsize=.8,style=solid,constraint=true];
+"nmpc"->"rl" [color="#ad88ce",penwidth=2.0,arrowsize=.8,style=dashed,constraint=false,label="önceki kontrol verisi",fontsize=10,fontcolor="#47556c"];
+"act"->"i" [color="#8060ab",penwidth=2.0,arrowsize=.8,style=dashed,constraint=false,label="yeni sahne",fontsize=10,fontcolor="#47556c"];
+"runtime"->"gate" [color="#6c85a8",penwidth=2.0,arrowsize=.8,style=dashed,constraint=false,label="deadline",fontsize=10,fontcolor="#47556c"];
+"runtime"->"critic" [color="#6c85a8",penwidth=2.0,arrowsize=.8,style=dashed,constraint=false,label="güncellik",fontsize=10,fontcolor="#47556c"];
+"act"->"trace" [color="#6c85a8",penwidth=2.0,arrowsize=.8,style=dashed,constraint=false];
+"rl"->"trace" [color="#6c85a8",penwidth=2.0,arrowsize=.8,style=dashed,constraint=false];
+}

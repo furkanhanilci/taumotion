@@ -1,0 +1,280 @@
+{
+  "kind": "SYNTHETIC_CONTRACT_EXAMPLE_NOT_MODEL_OUTPUT",
+  "schema_version": "taumotion/1.0",
+  "episode_id": "example_episode",
+  "scene_id": "example_scene",
+  "frame_id": 200,
+  "t_capture_sim_s": 10,
+  "coordinate_frame": "ego_at_t0_x_forward_y_left",
+  "privilege": "camera_ego_route_only",
+  "candidate": {
+    "candidate_id": "A_sample_0",
+    "planner_id": "A",
+    "native_horizon_s": 5,
+    "common_horizon_s": 4,
+    "common_dt_s": 0.1,
+    "native_resolution_s": 0.1,
+    "interpolation": true,
+    "seed": 42,
+    "poses": [
+      {
+        "t_s": 0.1,
+        "x_m": 0.5,
+        "y_m": 0,
+        "yaw_rad": 0
+      },
+      {
+        "t_s": 0.2,
+        "x_m": 1,
+        "y_m": 0,
+        "yaw_rad": 0
+      },
+      {
+        "t_s": 0.3,
+        "x_m": 1.5,
+        "y_m": 0,
+        "yaw_rad": 0
+      },
+      {
+        "t_s": 0.4,
+        "x_m": 2,
+        "y_m": 0,
+        "yaw_rad": 0
+      },
+      {
+        "t_s": 0.5,
+        "x_m": 2.5,
+        "y_m": 0,
+        "yaw_rad": 0
+      },
+      {
+        "t_s": 0.6,
+        "x_m": 3,
+        "y_m": 0,
+        "yaw_rad": 0
+      },
+      {
+        "t_s": 0.7,
+        "x_m": 3.5,
+        "y_m": 0,
+        "yaw_rad": 0
+      },
+      {
+        "t_s": 0.8,
+        "x_m": 4,
+        "y_m": 0,
+        "yaw_rad": 0
+      },
+      {
+        "t_s": 0.9,
+        "x_m": 4.5,
+        "y_m": 0,
+        "yaw_rad": 0
+      },
+      {
+        "t_s": 1,
+        "x_m": 5,
+        "y_m": 0,
+        "yaw_rad": 0
+      },
+      {
+        "t_s": 1.1,
+        "x_m": 5.5,
+        "y_m": 0,
+        "yaw_rad": 0
+      },
+      {
+        "t_s": 1.2,
+        "x_m": 6,
+        "y_m": 0,
+        "yaw_rad": 0
+      },
+      {
+        "t_s": 1.3,
+        "x_m": 6.5,
+        "y_m": 0,
+        "yaw_rad": 0
+      },
+      {
+        "t_s": 1.4,
+        "x_m": 7,
+        "y_m": 0,
+        "yaw_rad": 0
+      },
+      {
+        "t_s": 1.5,
+        "x_m": 7.5,
+        "y_m": 0,
+        "yaw_rad": 0
+      },
+      {
+        "t_s": 1.6,
+        "x_m": 8,
+        "y_m": 0,
+        "yaw_rad": 0
+      },
+      {
+        "t_s": 1.7,
+        "x_m": 8.5,
+        "y_m": 0,
+        "yaw_rad": 0
+      },
+      {
+        "t_s": 1.8,
+        "x_m": 9,
+        "y_m": 0,
+        "yaw_rad": 0
+      },
+      {
+        "t_s": 1.9,
+        "x_m": 9.5,
+        "y_m": 0,
+        "yaw_rad": 0
+      },
+      {
+        "t_s": 2,
+        "x_m": 10,
+        "y_m": 0,
+        "yaw_rad": 0
+      },
+      {
+        "t_s": 2.1,
+        "x_m": 10.5,
+        "y_m": 0,
+        "yaw_rad": 0
+      },
+      {
+        "t_s": 2.2,
+        "x_m": 11,
+        "y_m": 0,
+        "yaw_rad": 0
+      },
+      {
+        "t_s": 2.3,
+        "x_m": 11.5,
+        "y_m": 0,
+        "yaw_rad": 0
+      },
+      {
+        "t_s": 2.4,
+        "x_m": 12,
+        "y_m": 0,
+        "yaw_rad": 0
+      },
+      {
+        "t_s": 2.5,
+        "x_m": 12.5,
+        "y_m": 0,
+        "yaw_rad": 0
+      },
+      {
+        "t_s": 2.6,
+        "x_m": 13,
+        "y_m": 0,
+        "yaw_rad": 0
+      },
+      {
+        "t_s": 2.7,
+        "x_m": 13.5,
+        "y_m": 0,
+        "yaw_rad": 0
+      },
+      {
+        "t_s": 2.8,
+        "x_m": 14,
+        "y_m": 0,
+        "yaw_rad": 0
+      },
+      {
+        "t_s": 2.9,
+        "x_m": 14.5,
+        "y_m": 0,
+        "yaw_rad": 0
+      },
+      {
+        "t_s": 3,
+        "x_m": 15,
+        "y_m": 0,
+        "yaw_rad": 0
+      },
+      {
+        "t_s": 3.1,
+        "x_m": 15.5,
+        "y_m": 0,
+        "yaw_rad": 0
+      },
+      {
+        "t_s": 3.2,
+        "x_m": 16,
+        "y_m": 0,
+        "yaw_rad": 0
+      },
+      {
+        "t_s": 3.3,
+        "x_m": 16.5,
+        "y_m": 0,
+        "yaw_rad": 0
+      },
+      {
+        "t_s": 3.4,
+        "x_m": 17,
+        "y_m": 0,
+        "yaw_rad": 0
+      },
+      {
+        "t_s": 3.5,
+        "x_m": 17.5,
+        "y_m": 0,
+        "yaw_rad": 0
+      },
+      {
+        "t_s": 3.6,
+        "x_m": 18,
+        "y_m": 0,
+        "yaw_rad": 0
+      },
+      {
+        "t_s": 3.7,
+        "x_m": 18.5,
+        "y_m": 0,
+        "yaw_rad": 0
+      },
+      {
+        "t_s": 3.8,
+        "x_m": 19,
+        "y_m": 0,
+        "yaw_rad": 0
+      },
+      {
+        "t_s": 3.9,
+        "x_m": 19.5,
+        "y_m": 0,
+        "yaw_rad": 0
+      },
+      {
+        "t_s": 4,
+        "x_m": 20,
+        "y_m": 0,
+        "yaw_rad": 0
+      }
+    ]
+  },
+  "grounding": {
+    "claim_id": "c1",
+    "actor_ref": null,
+    "horizon_s": 2,
+    "status": "UNKNOWN",
+    "support_score": null,
+    "evidence_refs": [],
+    "forecast_flag": true,
+    "reason": "actor_not_resolved_not_false"
+  },
+  "trace": {
+    "selected_candidate_id": "A_sample_0",
+    "sampled_action_logp": null,
+    "logp_status": "illustrative_not_sampled",
+    "residual_applied": false,
+    "accepted_reference_id": null,
+    "executed_control": null
+  }
+}

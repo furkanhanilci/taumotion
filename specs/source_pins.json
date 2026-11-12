@@ -1,0 +1,244 @@
+{
+  "as_of": "2026-11-11",
+  "kind": "inspected_source_baseline_not_install_lock",
+  "repositories": [
+    {
+      "repo": "QwenLM/Qwen-Drive-1.0",
+      "sha": "28091c1532e869bc7aee91fc0aef6b3e6fd0b2e0",
+      "date": "2026-09-03T01:38:48Z",
+      "url": "https://github.com/QwenLM/Qwen-Drive-1.0/commit/28091c1532e869bc7aee91fc0aef6b3e6fd0b2e0",
+      "inspection_status": "source_inspected_not_runtime_validated",
+      "weights_sha256": null,
+      "license_code": "verify_exact_pinned_LICENSE_before_redistribution",
+      "license_weights": "verify_model_card_before_download"
+    },
+    {
+      "repo": "xiaomi-research/recogdrive",
+      "sha": "5831ee83c7a6a40bf6919715b96b0e9ba2b48335",
+      "date": "2026-10-14T09:55:29Z",
+      "url": "https://github.com/xiaomi-research/recogdrive/commit/5831ee83c7a6a40bf6919715b96b0e9ba2b48335",
+      "inspection_status": "source_inspected_not_runtime_validated",
+      "weights_sha256": null,
+      "license_code": "verify_exact_pinned_LICENSE_before_redistribution",
+      "license_weights": "verify_model_card_before_download"
+    },
+    {
+      "repo": "autowarefoundation/auto_e2e",
+      "sha": "bc7e27cdfaa961cbc6aabab8c75ea0304479e795",
+      "date": "2026-11-10T11:56:14Z",
+      "url": "https://github.com/autowarefoundation/auto_e2e/commit/bc7e27cdfaa961cbc6aabab8c75ea0304479e795",
+      "inspection_status": "source_inspected_not_runtime_validated",
+      "weights_sha256": null,
+      "license_code": "verify_exact_pinned_LICENSE_before_redistribution",
+      "license_weights": "verify_model_card_before_download"
+    },
+    {
+      "repo": "autonomousvision/navsim",
+      "sha": "0a380a9063d7162ec93d0f51e9990ebac585f720",
+      "date": "2025-10-27T21:19:43Z",
+      "url": "https://github.com/autonomousvision/navsim/commit/0a380a9063d7162ec93d0f51e9990ebac585f720",
+      "inspection_status": "source_inspected_not_runtime_validated",
+      "weights_sha256": null,
+      "license_code": "verify_exact_pinned_LICENSE_before_redistribution",
+      "license_weights": "verify_model_card_before_download"
+    },
+    {
+      "repo": "Thinklab-SJTU/Bench2Drive",
+      "sha": "7ec25d1c9f7522d923ce5f3420986cef1cb2d956",
+      "date": "2026-08-11T02:52:13Z",
+      "url": "https://github.com/Thinklab-SJTU/Bench2Drive/commit/7ec25d1c9f7522d923ce5f3420986cef1cb2d956",
+      "inspection_status": "source_inspected_not_runtime_validated",
+      "weights_sha256": null,
+      "license_code": "verify_exact_pinned_LICENSE_before_redistribution",
+      "license_weights": "verify_model_card_before_download"
+    },
+    {
+      "repo": "Thinklab-SJTU/Bench2Drive-Robust",
+      "sha": "ae1b5867324710bf0574cba797062280d9d97105",
+      "date": "2026-05-20T06:49:10Z",
+      "url": "https://github.com/Thinklab-SJTU/Bench2Drive-Robust/commit/ae1b5867324710bf0574cba797062280d9d97105",
+      "inspection_status": "source_inspected_not_runtime_validated",
+      "weights_sha256": null,
+      "license_code": "verify_exact_pinned_LICENSE_before_redistribution",
+      "license_weights": "verify_model_card_before_download"
+    },
+    {
+      "repo": "OpenDriveLab/UniAD",
+      "sha": "609ee083ea51c3521c323f1279dfc4cee0e60467",
+      "date": "2025-10-29T03:13:35Z",
+      "url": "https://github.com/OpenDriveLab/UniAD/commit/609ee083ea51c3521c323f1279dfc4cee0e60467",
+      "inspection_status": "source_inspected_not_runtime_validated",
+      "weights_sha256": null,
+      "license_code": "verify_exact_pinned_LICENSE_before_redistribution",
+      "license_weights": "verify_model_card_before_download"
+    },
+    {
+      "repo": "acados/acados",
+      "sha": "7d43f571d8ea7488821bfa78b6110eba575d005e",
+      "date": "2026-11-11T13:05:06Z",
+      "url": "https://github.com/acados/acados/commit/7d43f571d8ea7488821bfa78b6110eba575d005e",
+      "inspection_status": "source_inspected_not_runtime_validated",
+      "weights_sha256": null,
+      "license_code": "verify_exact_pinned_LICENSE_before_redistribution",
+      "license_weights": "verify_model_card_before_download"
+    },
+    {
+      "repo": "Thinklab-SJTU/Bench2DriveZoo",
+      "sha": "d9caa0af805ec3c435533aa268e2723d80c20017",
+      "date": "2026-08-11T02:31:42Z",
+      "url": "https://github.com/Thinklab-SJTU/Bench2DriveZoo/tree/d9caa0af805ec3c435533aa268e2723d80c20017",
+      "branch": "uniad/vad-0.0.4",
+      "inspection_status": "source_inspected_not_runtime_validated",
+      "weights_sha256": null,
+      "license_code": "verify_exact_pinned_LICENSE_before_redistribution",
+      "license_weights": "verify_model_card_before_download"
+    },
+    {
+      "repo": "RenzKa/simlingo",
+      "sha": "743b243afd6cf5ff51b9fa1f8cac86f22d569684",
+      "date": "2025-08-25T13:17:03Z",
+      "url": "https://github.com/RenzKa/simlingo/commit/743b243afd6cf5ff51b9fa1f8cac86f22d569684",
+      "inspection_status": "source_inspected_not_runtime_validated",
+      "weights_sha256": null,
+      "license_code": "verify_exact_pinned_LICENSE_before_redistribution",
+      "license_weights": "verify_model_card_before_download"
+    },
+    {
+      "repo": "autowarefoundation/autoware_universe",
+      "sha": "5f8fccaaf85d7aed68c723a7d6b566dff6d49c99",
+      "date": "2026-11-11T11:37:16Z",
+      "url": "https://github.com/autowarefoundation/autoware_universe/commit/5f8fccaaf85d7aed68c723a7d6b566dff6d49c99",
+      "inspection_status": "source_inspected_not_runtime_validated",
+      "weights_sha256": null,
+      "license_code": "verify_exact_pinned_LICENSE_before_redistribution",
+      "license_weights": "verify_model_card_before_download"
+    },
+    {
+      "repo": "pytorch/rl",
+      "sha": "a711ef99d29f31ce6bc49ce5da499ddd87b4b1f8",
+      "date": "2026-11-08T03:32:52Z",
+      "url": "https://github.com/pytorch/rl/commit/a711ef99d29f31ce6bc49ce5da499ddd87b4b1f8",
+      "inspection_status": "source_inspected_not_runtime_validated",
+      "weights_sha256": null,
+      "license_code": "verify_exact_pinned_LICENSE_before_redistribution",
+      "license_weights": "verify_model_card_before_download"
+    },
+    {
+      "repo": "pytorch/tensordict",
+      "sha": "4a877a258392dcf12aa45ebbe3819070c7daa83e",
+      "date": "2026-11-11T16:32:47Z",
+      "url": "https://github.com/pytorch/tensordict/commit/4a877a258392dcf12aa45ebbe3819070c7daa83e",
+      "inspection_status": "source_inspected_not_runtime_validated",
+      "weights_sha256": null,
+      "license_code": "verify_exact_pinned_LICENSE_before_redistribution",
+      "license_weights": "verify_model_card_before_download"
+    },
+    {
+      "repo": "PKU-Alignment/Safe-Policy-Optimization",
+      "sha": "8d0fa763b5e9091db8bed502b7efe76f81b1d263",
+      "date": "2024-03-20T13:24:57Z",
+      "url": "https://github.com/PKU-Alignment/Safe-Policy-Optimization/commit/8d0fa763b5e9091db8bed502b7efe76f81b1d263",
+      "inspection_status": "source_inspected_not_runtime_validated",
+      "weights_sha256": null,
+      "license_code": "verify_exact_pinned_LICENSE_before_redistribution",
+      "license_weights": "verify_model_card_before_download"
+    },
+    {
+      "repo": "DLR-RM/stable-baselines3",
+      "sha": "0cdcd200deef06b9ad0af72f6ddfb07c06c6df39",
+      "date": "2026-10-26T09:32:04Z",
+      "url": "https://github.com/DLR-RM/stable-baselines3/commit/0cdcd200deef06b9ad0af72f6ddfb07c06c6df39",
+      "inspection_status": "source_inspected_not_runtime_validated",
+      "weights_sha256": null,
+      "license_code": "verify_exact_pinned_LICENSE_before_redistribution",
+      "license_weights": "verify_model_card_before_download"
+    },
+    {
+      "repo": "Stable-Baselines-Team/stable-baselines3-contrib",
+      "sha": "a8af63682070df0bda9707400b2e971055600910",
+      "date": "2026-10-26T09:48:25Z",
+      "url": "https://github.com/Stable-Baselines-Team/stable-baselines3-contrib/commit/a8af63682070df0bda9707400b2e971055600910",
+      "inspection_status": "source_inspected_not_runtime_validated",
+      "weights_sha256": null,
+      "license_code": "verify_exact_pinned_LICENSE_before_redistribution",
+      "license_weights": "verify_model_card_before_download"
+    },
+    {
+      "repo": "KIT-MRT/kitscenes",
+      "sha": "7765cdec5490894266070ab46e23724b58b3da42",
+      "date": "2026-06-03T15:26:16Z",
+      "url": "https://github.com/KIT-MRT/kitscenes/commit/7765cdec5490894266070ab46e23724b58b3da42",
+      "inspection_status": "source_inspected_not_runtime_validated",
+      "weights_sha256": null,
+      "license_code": "verify_exact_pinned_LICENSE_before_redistribution",
+      "license_weights": "verify_model_card_before_download"
+    },
+    {
+      "repo": "NVlabs/alpasim",
+      "sha": "affc2eab209fa43bdfa2f26c0f8d437922d78a68",
+      "date": "2026-08-18T07:48:04Z",
+      "url": "https://github.com/NVlabs/alpasim/commit/affc2eab209fa43bdfa2f26c0f8d437922d78a68",
+      "inspection_status": "source_inspected_not_runtime_validated",
+      "weights_sha256": null,
+      "license_code": "verify_exact_pinned_LICENSE_before_redistribution",
+      "license_weights": "verify_model_card_before_download"
+    },
+    {
+      "repo": "autonomousvision/navsim",
+      "sha": "3e8291bfa89ff247231e0227778840cd0a036896",
+      "date": "2025-06-05T15:40:24Z",
+      "url": "https://github.com/autonomousvision/navsim/commit/3e8291bfa89ff247231e0227778840cd0a036896",
+      "tag": "v1.1",
+      "inspection_status": "release_commit_resolved_not_executed",
+      "weights_sha256": null
+    },
+    {
+      "repo": "autonomousvision/navsim",
+      "sha": "937cefc1b116f930990abea1c54185308a96029f",
+      "date": "2025-04-24T21:04:53Z",
+      "url": "https://github.com/autonomousvision/navsim/commit/937cefc1b116f930990abea1c54185308a96029f",
+      "tag": "v2.1.2",
+      "inspection_status": "release_commit_resolved_not_executed",
+      "weights_sha256": null
+    },
+    {
+      "repo": "rlabbe/filterpy",
+      "sha": "582885dd9e01c2784a5786b02fb527b46f090370",
+      "tag": "1.4.5",
+      "date": "2018-10-10",
+      "inspection_status": "predict_update_source_inspected_not_executed",
+      "url": "https://github.com/rlabbe/filterpy/tree/582885dd9e01c2784a5786b02fb527b46f090370",
+      "weights_sha256": null
+    },
+    {
+      "repo": "CountNemoChan/FPD-Drive",
+      "sha": "79bfad7c77c936138d14f8ecea0b3a55f6d563ff",
+      "date": "2026-10-12T11:24:54Z",
+      "url": "https://github.com/CountNemoChan/FPD-Drive/commit/79bfad7c77c936138d14f8ecea0b3a55f6d563ff",
+      "inspection_status": "selected_source_files_inspected_not_runtime_validated",
+      "weights_sha256": null,
+      "license_code": "Apache-2.0",
+      "license_weights": "verify_model_card_and_dependencies"
+    },
+    {
+      "repo": "kesai-labs/lead",
+      "sha": "3764f79698922896638638df8062f2e064034610",
+      "date": "2026-09-14T09:09:02Z",
+      "url": "https://github.com/kesai-labs/lead/commit/3764f79698922896638638df8062f2e064034610",
+      "inspection_status": "selected_source_files_inspected_not_runtime_validated",
+      "weights_sha256": null,
+      "license_code": "MIT",
+      "license_weights": "verify_model_card_and_dependencies"
+    },
+    {
+      "repo": "ShuLiu-ETHZ/BridgeDrive",
+      "sha": "85aa089a321a7b7cbc42aa58b3be508eb223d9e2",
+      "date": "2026-08-22T03:24:55Z",
+      "url": "https://github.com/ShuLiu-ETHZ/BridgeDrive/commit/85aa089a321a7b7cbc42aa58b3be508eb223d9e2",
+      "inspection_status": "selected_source_files_inspected_not_runtime_validated",
+      "weights_sha256": null,
+      "license_code": "CHECK_UPSTREAM_COMPONENTS",
+      "license_weights": "verify_model_card_and_dependencies"
+    }
+  ]
+}

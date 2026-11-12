@@ -1,0 +1,310 @@
+{
+  "release": "1.3",
+  "date": "2026-11-12",
+  "scope": "architecture documentation and brand; not driving validation",
+  "total": 50,
+  "passed": 50,
+  "failed": [],
+  "checks": [
+    {
+      "id": 1,
+      "check": "24 canonical modules",
+      "pass": true,
+      "details": ""
+    },
+    {
+      "id": 2,
+      "check": "54 canonical directed edges",
+      "pass": true,
+      "details": ""
+    },
+    {
+      "id": 3,
+      "check": "24 modules described individually in master TR",
+      "pass": true,
+      "details": ""
+    },
+    {
+      "id": 4,
+      "check": "24 modules in companion EN",
+      "pass": true,
+      "details": ""
+    },
+    {
+      "id": 5,
+      "check": "required canonical field present: necessity",
+      "pass": true,
+      "details": "module metadata"
+    },
+    {
+      "id": 6,
+      "check": "required canonical field present: input",
+      "pass": true,
+      "details": "module metadata"
+    },
+    {
+      "id": 7,
+      "check": "required canonical field present: output",
+      "pass": true,
+      "details": "module metadata"
+    },
+    {
+      "id": 8,
+      "check": "required canonical field present: training",
+      "pass": true,
+      "details": "module metadata"
+    },
+    {
+      "id": 9,
+      "check": "required canonical field present: failure",
+      "pass": true,
+      "details": "module metadata"
+    },
+    {
+      "id": 10,
+      "check": "required canonical field present: bridge",
+      "pass": true,
+      "details": "module metadata"
+    },
+    {
+      "id": 11,
+      "check": "required canonical field present: source",
+      "pass": true,
+      "details": "module metadata"
+    },
+    {
+      "id": 12,
+      "check": "master technical coverage: hybrid E2E scope",
+      "pass": true,
+      "details": ""
+    },
+    {
+      "id": 13,
+      "check": "master technical coverage: not monolithic",
+      "pass": true,
+      "details": ""
+    },
+    {
+      "id": 14,
+      "check": "master technical coverage: offline teacher policy separation",
+      "pass": true,
+      "details": ""
+    },
+    {
+      "id": 15,
+      "check": "master technical coverage: critic differentiation",
+      "pass": true,
+      "details": ""
+    },
+    {
+      "id": 16,
+      "check": "master technical coverage: bounded residual",
+      "pass": true,
+      "details": ""
+    },
+    {
+      "id": 17,
+      "check": "master technical coverage: dual planner K6",
+      "pass": true,
+      "details": ""
+    },
+    {
+      "id": 18,
+      "check": "master technical coverage: NMPC state",
+      "pass": true,
+      "details": ""
+    },
+    {
+      "id": 19,
+      "check": "master technical coverage: independent guardian",
+      "pass": true,
+      "details": ""
+    },
+    {
+      "id": 20,
+      "check": "master technical coverage: separate stale evidence",
+      "pass": true,
+      "details": ""
+    },
+    {
+      "id": 21,
+      "check": "master technical coverage: XAI world intervention",
+      "pass": true,
+      "details": ""
+    },
+    {
+      "id": 22,
+      "check": "master technical coverage: AutoE2E already included",
+      "pass": true,
+      "details": ""
+    },
+    {
+      "id": 23,
+      "check": "master technical coverage: classic Autoware baseline",
+      "pass": true,
+      "details": ""
+    },
+    {
+      "id": 24,
+      "check": "master technical coverage: all benchmark targets",
+      "pass": true,
+      "details": ""
+    },
+    {
+      "id": 25,
+      "check": "master technical coverage: no roof LiDAR",
+      "pass": true,
+      "details": ""
+    },
+    {
+      "id": 26,
+      "check": "logo PNG correct and hash locked",
+      "pass": true,
+      "details": ""
+    },
+    {
+      "id": 27,
+      "check": "new logo approval and old logo both preserved",
+      "pass": true,
+      "details": ""
+    },
+    {
+      "id": 28,
+      "check": "brand docs clarify raster and no lidar",
+      "pass": true,
+      "details": ""
+    },
+    {
+      "id": 29,
+      "check": "forecast status explicitly unmeasured",
+      "pass": true,
+      "details": ""
+    },
+    {
+      "id": 30,
+      "check": "benchmark matrix six metrics",
+      "pass": true,
+      "details": ""
+    },
+    {
+      "id": 31,
+      "check": "Autoware positions documented",
+      "pass": true,
+      "details": ""
+    },
+    {
+      "id": 32,
+      "check": "no third mandatory planner",
+      "pass": true,
+      "details": ""
+    },
+    {
+      "id": 33,
+      "check": "history old U01-U15 intact",
+      "pass": true,
+      "details": ""
+    },
+    {
+      "id": 34,
+      "check": "new history U16-U25 complete",
+      "pass": true,
+      "details": ""
+    },
+    {
+      "id": 35,
+      "check": "assistant summaries non-verbatim marked",
+      "pass": true,
+      "details": ""
+    },
+    {
+      "id": 36,
+      "check": "historical v1_0 zip archive preserved",
+      "pass": true,
+      "details": ""
+    },
+    {
+      "id": 37,
+      "check": "historical v1_1 zip archive preserved",
+      "pass": true,
+      "details": ""
+    },
+    {
+      "id": 38,
+      "check": "historical v1_2 zip archive preserved",
+      "pass": true,
+      "details": ""
+    },
+    {
+      "id": 39,
+      "check": "v1.2 historical archive byte for byte",
+      "pass": true,
+      "details": ""
+    },
+    {
+      "id": 40,
+      "check": "existing vector diagram online_tr",
+      "pass": true,
+      "details": ""
+    },
+    {
+      "id": 41,
+      "check": "existing vector diagram online_en",
+      "pass": true,
+      "details": ""
+    },
+    {
+      "id": 42,
+      "check": "existing vector diagram offline_tr",
+      "pass": true,
+      "details": ""
+    },
+    {
+      "id": 43,
+      "check": "existing vector diagram offline_en",
+      "pass": true,
+      "details": ""
+    },
+    {
+      "id": 44,
+      "check": "existing vector diagram control_tr",
+      "pass": true,
+      "details": ""
+    },
+    {
+      "id": 45,
+      "check": "existing vector diagram control_en",
+      "pass": true,
+      "details": ""
+    },
+    {
+      "id": 46,
+      "check": "existing vector diagram full_modules_tr",
+      "pass": true,
+      "details": ""
+    },
+    {
+      "id": 47,
+      "check": "existing vector diagram full_modules_en",
+      "pass": true,
+      "details": ""
+    },
+    {
+      "id": 48,
+      "check": "authoritative Markdown local links all resolve",
+      "pass": true,
+      "details": "[]"
+    },
+    {
+      "id": 49,
+      "check": "final PDF opens and has >=35 pages",
+      "pass": true,
+      "details": "pages=61"
+    },
+    {
+      "id": 50,
+      "check": "final PDF current branding/version",
+      "pass": true,
+      "details": ""
+    }
+  ]
+}

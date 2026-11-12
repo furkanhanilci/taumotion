@@ -1,0 +1,22 @@
+__pycache__/
+*.pyc
+.venv/
+.env
+.env.*
+checkpoints/
+datasets/
+runs/
+*.safetensors
+*.pth
+*.pt
+*.ckpt
+private_archive/
+
+# Local original archives, raw conversations and superseded build artifacts
+archive/
+history/*verbatim.md
+reports/Architecture_Specification_v1.1.*
+reports/TAUMOTION_Architecture_Specification_v1.2.pdf
+reports/TAUMOTION_Final_Architecture_Specification_v1_3.pdf
+reports/package_manifest_sha256*.json
+.venv/

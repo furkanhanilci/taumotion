@@ -1,0 +1,111 @@
+{
+  "status": "CONDITIONAL_ARCHITECTURE_FORECAST_NOT_MEASURED",
+  "forecast_interpretation": "User-retained illustrative planning assumptions; no fitted predictor, calibrated probability, confidence interval or measured TAUMOTION outcome",
+  "documentation_date": "2026-11-12",
+  "scenarios": [
+    {
+      "benchmark": "NAVSIM v1.1",
+      "metric": "PDMS",
+      "point_expectation": 92.5,
+      "scenario_range": [
+        91.5,
+        93.5
+      ],
+      "ambitious_scenario": [
+        94,
+        95
+      ],
+      "better": "higher"
+    },
+    {
+      "benchmark": "NAVSIM v2.1.2 navhard",
+      "metric": "EPDMS",
+      "point_expectation": 53,
+      "scenario_range": [
+        48,
+        58
+      ],
+      "ambitious_scenario": [
+        59,
+        62
+      ],
+      "better": "higher"
+    },
+    {
+      "benchmark": "Bench2Drive v0.0.4",
+      "metric": "Driving Score",
+      "point_expectation": 82,
+      "scenario_range": [
+        75,
+        85
+      ],
+      "ambitious_scenario": [
+        88,
+        92
+      ],
+      "better": "higher"
+    },
+    {
+      "benchmark": "Bench2Drive v0.0.4",
+      "metric": "Success Rate",
+      "point_expectation": 60,
+      "scenario_range": [
+        50,
+        65
+      ],
+      "ambitious_scenario": [
+        70,
+        80
+      ],
+      "better": "higher"
+    },
+    {
+      "benchmark": "KITScenes old 202 @3s",
+      "metric": "ADE meters",
+      "point_expectation": 0.6,
+      "scenario_range": [
+        0.55,
+        0.7
+      ],
+      "ambitious_scenario": [
+        0.48,
+        0.55
+      ],
+      "better": "lower"
+    },
+    {
+      "benchmark": "KITScenes old 202 @3s",
+      "metric": "FDE meters",
+      "point_expectation": 1.55,
+      "scenario_range": [
+        1.35,
+        1.85
+      ],
+      "ambitious_scenario": [
+        1.15,
+        1.35
+      ],
+      "better": "lower"
+    }
+  ],
+  "stretch_target_not_estimate": {
+    "KITScenes_ADE_3s_max_m": 0.565,
+    "KITScenes_FDE_3s_max_m": 1.397,
+    "NAVSIM_v1_PDMS_min": 95,
+    "Bench2Drive_DS_min": 90,
+    "Bench2Drive_SR_pct_range": [
+      75,
+      80
+    ]
+  },
+  "classical_autoware_common_score": null,
+  "notes": [
+    "No runtime/benchmark results measured for tau in this archive",
+    "Do not compare NAVSIM PDMS and EPDMS directly",
+    "KITScenes 202 legacy vs 11035 corrected differ",
+    "Classic Autoware common published benchmark metric unavailable",
+    "Source scores and sensor privilege require matching protocol"
+  ],
+  "empirical_basis_for_tau_point_estimates": null,
+  "publication_use": "Scenario planning only; exclude from measured leaderboard ranking"
+}

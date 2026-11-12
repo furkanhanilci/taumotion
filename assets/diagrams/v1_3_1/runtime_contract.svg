@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1900" height="1180" viewBox="0 0 1900 1180" role="img"><title>Runtime composition and command ownership</title>
+<rect x="0" y="0" width="1900" height="1180" rx="0" fill="#f5f8fc" stroke="none"/>
+<text x="60" y="65" fill="#113047" font-family="DejaVu Sans,sans-serif" font-size="34" font-weight="700" letter-spacing="0">Runtime composition and command ownership</text>
+<text x="60" y="105" fill="#607a90" font-family="DejaVu Sans,sans-serif" font-size="18" font-weight="400" letter-spacing="0">Different model rates; one actuator writer; no blocking dependency on a late model or solver</text>
+<rect x="60" y="165" width="530" height="140" rx="14" fill="#e7effa" stroke="#77a0d6"/>
+<text x="78" y="197" fill="#13344b" font-family="DejaVu Sans,sans-serif" font-size="23" font-weight="700" letter-spacing="0">Scene and model services</text>
+<text x="78" y="232" fill="#4b697e" font-family="DejaVu Sans,sans-serif" font-size="18" font-weight="400" letter-spacing="0">Native environments and checkpoint contracts;</text>
+<text x="78" y="256" fill="#4b697e" font-family="DejaVu Sans,sans-serif" font-size="18" font-weight="400" letter-spacing="0">M03/M07 can share one VLM weight service</text>
+<rect x="685" y="165" width="530" height="140" rx="14" fill="#fff2d6" stroke="#d0a24b"/>
+<text x="703" y="197" fill="#13344b" font-family="DejaVu Sans,sans-serif" font-size="23" font-weight="700" letter-spacing="0">M16 | Resource and age scheduler</text>
+<text x="703" y="232" fill="#4b697e" font-family="DejaVu Sans,sans-serif" font-size="18" font-weight="400" letter-spacing="0">Bounded pending queue; generation IDs; periodic /</text>
+<text x="703" y="256" fill="#4b697e" font-family="DejaVu Sans,sans-serif" font-size="18" font-weight="400" letter-spacing="0">EDF / AoI-event policies</text>
+<rect x="1310" y="165" width="530" height="140" rx="14" fill="#e0f3ed" stroke="#67b8a3"/>
+<text x="1328" y="197" fill="#13344b" font-family="DejaVu Sans,sans-serif" font-size="23" font-weight="700" letter-spacing="0">M23 | Evidence prediction bridge</text>
+<text x="1328" y="232" fill="#4b697e" font-family="DejaVu Sans,sans-serif" font-size="18" font-weight="400" letter-spacing="0">Update time alignment, preserve capture time, expire</text>
+<text x="1328" y="256" fill="#4b697e" font-family="DejaVu Sans,sans-serif" font-size="18" font-weight="400" letter-spacing="0">unsupported information</text>
+<path d="M 590 235 L 685 235" fill="none" stroke="#507790" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 685 235 L 673.183 240.419 L 673.183 229.581 Z " fill="#507790" stroke="none" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 1215 235 L 1310 235" fill="none" stroke="#507790" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 1310 235 L 1298.183 240.419 L 1298.183 229.581 Z " fill="#507790" stroke="none" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="60" y="440" width="530" height="160" rx="14" fill="#e7effa" stroke="#77a0d6"/>
+<text x="78" y="472" fill="#13344b" font-family="DejaVu Sans,sans-serif" font-size="23" font-weight="700" letter-spacing="0">Perception · A · B · semantics</text>
+<text x="78" y="507" fill="#4b697e" font-family="DejaVu Sans,sans-serif" font-size="18" font-weight="400" letter-spacing="0">Frequency sweeps are pilot hypotheses.</text>
+<text x="78" y="531" fill="#4b697e" font-family="DejaVu Sans,sans-serif" font-size="18" font-weight="400" letter-spacing="0">Measure cold, warm, co-load and renderer contention.</text>
+<rect x="685" y="440" width="530" height="160" rx="14" fill="#e0f3ed" stroke="#67b8a3"/>
+<text x="703" y="472" fill="#13344b" font-family="DejaVu Sans,sans-serif" font-size="23" font-weight="700" letter-spacing="0">Policy and reference validation</text>
+<text x="703" y="507" fill="#4b697e" font-family="DejaVu Sans,sans-serif" font-size="18" font-weight="400" letter-spacing="0">Asynchronous proposals; fresh state snapshot;</text>
+<text x="703" y="531" fill="#4b697e" font-family="DejaVu Sans,sans-serif" font-size="18" font-weight="400" letter-spacing="0">geometry and uncertainty checks</text>
+<rect x="1310" y="440" width="530" height="160" rx="14" fill="#e0f3ed" stroke="#67b8a3"/>
+<text x="1328" y="472" fill="#13344b" font-family="DejaVu Sans,sans-serif" font-size="23" font-weight="700" letter-spacing="0">M14 | NMPC worker</text>
+<text x="1328" y="507" fill="#4b697e" font-family="DejaVu Sans,sans-serif" font-size="18" font-weight="400" letter-spacing="0">Preparation + feedback measured separately; late</text>
+<text x="1328" y="531" fill="#4b697e" font-family="DejaVu Sans,sans-serif" font-size="18" font-weight="400" letter-spacing="0">results cannot overwrite new generations</text>
+<path d="M 950 305 L 950 365 L 325 365 L 325 440" fill="none" stroke="#507790" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 325 440 L 319.581 428.183 L 330.419 428.183 Z " fill="#507790" stroke="none" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 590 520 L 685 520" fill="none" stroke="#507790" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 685 520 L 673.183 525.419 L 673.183 514.581 Z " fill="#507790" stroke="none" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 1215 520 L 1310 520" fill="none" stroke="#507790" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 1310 520 L 1298.183 525.419 L 1298.183 514.581 Z " fill="#507790" stroke="none" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="685" y="740" width="530" height="160" rx="14" fill="#fff2d6" stroke="#d0a24b"/>
+<text x="703" y="772" fill="#13344b" font-family="DejaVu Sans,sans-serif" font-size="23" font-weight="700" letter-spacing="0">M22 | Independent deadline guardian</text>
+<text x="703" y="807" fill="#4b697e" font-family="DejaVu Sans,sans-serif" font-size="18" font-weight="400" letter-spacing="0">Accept current valid result, use a still-valid</text>
+<text x="703" y="831" fill="#4b697e" font-family="DejaVu Sans,sans-serif" font-size="18" font-weight="400" letter-spacing="0">continuation, or select a calibrated stop profile</text>
+<rect x="1310" y="740" width="530" height="160" rx="14" fill="#eaf0f5" stroke="#9eb1c2"/>
+<text x="1328" y="772" fill="#13344b" font-family="DejaVu Sans,sans-serif" font-size="23" font-weight="700" letter-spacing="0">M15 | Single vehicle command writer</text>
+<text x="1328" y="807" fill="#4b697e" font-family="DejaVu Sans,sans-serif" font-size="18" font-weight="400" letter-spacing="0">Normal and fallback commands share one output</text>
+<text x="1328" y="831" fill="#4b697e" font-family="DejaVu Sans,sans-serif" font-size="18" font-weight="400" letter-spacing="0">path; log the actual executed command</text>
+<path d="M 1575 600 L 1575 670 L 950 670 L 950 740" fill="none" stroke="#507790" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 950 740 L 944.581 728.183 L 955.419 728.183 Z " fill="#507790" stroke="none" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 950 600 L 950 740" fill="none" stroke="#8495a6" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="9 6"/>
+<path d="M 950 740 L 944.581 728.183 L 955.419 728.183 Z " fill="#8495a6" stroke="none" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="650" y="655" fill="#8495a6" font-family="DejaVu Sans,sans-serif" font-size="16" font-weight="400" letter-spacing="0">deadline / state / reference</text>
+<path d="M 1215 820 L 1310 820" fill="none" stroke="#507790" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 1310 820 L 1298.183 825.419 L 1298.183 814.581 Z " fill="#507790" stroke="none" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="60" y="740" width="530" height="160" rx="14" fill="#eaf0f5" stroke="#9eb1c2"/>
+<text x="78" y="772" fill="#13344b" font-family="DejaVu Sans,sans-serif" font-size="23" font-weight="700" letter-spacing="0">20 Hz critical path budget</text>
+<text x="78" y="807" fill="#4b697e" font-family="DejaVu Sans,sans-serif" font-size="18" font-weight="400" letter-spacing="0">Example only: 4 ms snapshot/check + 32 ms</text>
+<text x="78" y="831" fill="#4b697e" font-family="DejaVu Sans,sans-serif" font-size="18" font-weight="400" letter-spacing="0">feedback + 4 ms gate/publish + 10 ms jitter reserve</text>
+<text x="60" y="1000" fill="#13344b" font-family="DejaVu Sans,sans-serif" font-size="24" font-weight="700" letter-spacing="0">P0  Synchronous reference</text>
+<text x="60" y="1040" fill="#13344b" font-family="DejaVu Sans,sans-serif" font-size="24" font-weight="700" letter-spacing="0">P1  Asynchronous teacher + dual planners</text>
+<text x="1010" y="1000" fill="#13344b" font-family="DejaVu Sans,sans-serif" font-size="24" font-weight="700" letter-spacing="0">P2  Small semantic student + dual planners</text>
+<text x="1010" y="1040" fill="#13344b" font-family="DejaVu Sans,sans-serif" font-size="24" font-weight="700" letter-spacing="0">P3  Conditional planner calls</text>
+<text x="60" y="1130" fill="#607a90" font-family="DejaVu Sans,sans-serif" font-size="21" font-weight="400" letter-spacing="0">All profiles remain in scope. Successful synchronous driving does not establish real-time operation.</text>
+</svg>

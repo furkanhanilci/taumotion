@@ -1,0 +1,95 @@
+{
+  "status": "model_repositories_verified_weights_not_downloaded_no_runtime_or_new_critic_training",
+  "models": [
+    {
+      "role": "semantic_main_and_planner_A",
+      "repo": "Qwen/Qwen-Drive-1.0-4B",
+      "url": "https://huggingface.co/Qwen/Qwen-Drive-1.0-4B",
+      "semantic_part": "root VLM",
+      "planner_part": "planner-rl",
+      "mode": "reasoning",
+      "ablation": "planner-sft direct/reasoning",
+      "revision": null,
+      "sha256": null
+    },
+    {
+      "role": "planner_B_backbone",
+      "repo": "owl10/ReCogDrive-VLM-2B",
+      "url": "https://huggingface.co/owl10/ReCogDrive-VLM-2B",
+      "revision": null,
+      "sha256": null
+    },
+    {
+      "role": "planner_B_expert",
+      "repo": "owl10/ReCogDrive-2B-RL",
+      "url": "https://huggingface.co/owl10/ReCogDrive-2B-RL",
+      "revision": null,
+      "sha256": null
+    },
+    {
+      "role": "evidence_carla",
+      "repo": "rethinklab/Bench2DriveZoo",
+      "filename": "uniad_tiny_b2d.pth",
+      "url": "https://huggingface.co/rethinklab/Bench2DriveZoo",
+      "revision": null,
+      "sha256": null,
+      "requires": "strict config shape match on uniad/vad-0.0.4"
+    },
+    {
+      "role": "semantic_comparison",
+      "repo": "Qwen/Qwen3.8-27B",
+      "url": "https://huggingface.co/Qwen/Qwen3.8-27B",
+      "revision": null,
+      "sha256": null
+    }
+  ],
+  "additional_evaluated_repositories": [
+    {
+      "role": "advanced_native_planner_baseline",
+      "repo": "CountNemoChan/FPD-Drive",
+      "code_source": "https://github.com/CountNemoChan/FPD-Drive",
+      "checkpoint": "Pro-v1",
+      "mode": "baseline_offline_or_separate_challenger",
+      "revision": null,
+      "sha256": null,
+      "main_online": false,
+      "requires": "native source features and own scorer, cannot reuse scorer head with tau candidate features without retraining"
+    },
+    {
+      "role": "expert_and_data_generation_infrastructure",
+      "repo": "kesai-labs/lead",
+      "code_source": "https://github.com/kesai-labs/lead",
+      "branch": "main",
+      "mode": "offline_expert_visibility_data",
+      "revision": null,
+      "sha256": null,
+      "main_online": false,
+      "requires": "main and cvpr2026 dataset/checkpoints are incompatible"
+    },
+    {
+      "role": "diffusion_bridge_comparison_optional",
+      "repo": "ShuLiu-ETHZ/BridgeDrive",
+      "code_source": "https://github.com/ShuLiu-ETHZ/BridgeDrive",
+      "mode": "optional_baseline_ablation",
+      "revision": null,
+      "sha256": null,
+      "main_online": false
+    }
+  ],
+  "new_small_trainable_models": [
+    {
+      "role": "candidate_safety_performance_critic",
+      "submodule": "M10-C",
+      "params": "to_be_defined_small",
+      "training": "offline_multihead_ranking_calibration",
+      "checkpoint_sha256": null,
+      "status": "SPECIFIED_NOT_TRAINED"
+    },
+    {
+      "role": "visibility_aware_calibration",
+      "submodule": "M06-V",
+      "training": "offline calibration optional",
+      "status": "SPECIFIED_NOT_TRAINED"
+    }
+  ]
+}

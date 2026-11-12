@@ -1,0 +1,41 @@
+{
+  "document_release": "1.3.1",
+  "frozen_architecture_topology": "1.2",
+  "frozen_main_modules": 24,
+  "frozen_architecture_edges": 54,
+  "positioning": "Explainable, Risk-Aware Hybrid End-to-End Autonomous Driving Framework",
+  "not_a_claim": "fully end-to-end trainable / monolithic",
+  "main_online_planners": [
+    "M07 flow-based frozen",
+    "M08 diffusion-based frozen"
+  ],
+  "optional_fast_bev_gru": "M20 baseline only, not required third live planner",
+  "autoware_auto_e2e_already_included": {
+    "M04": "reasoning taxonomy",
+    "M05": "horizon head and student",
+    "M11": "zero-init reasoning coupling and candidate GRU",
+    "M18": "faithfulness intervention",
+    "M20": "BEV+GRU baseline",
+    "M16": "speed harness",
+    "M21": "adapter/data tools"
+  },
+  "brand_approved_path": "assets/brand/TAUMOTION_APPROVED_FINAL_LOGO_2026-11-12.png",
+  "brand_approved_sha256": "d248942e4dac057157d4cd0d09b904d0dc44eec0c14dcf14336da76d0859a77d",
+  "logo_lidar_roof": false,
+  "architecture_definition_priority_over_runtime_tests": true,
+  "data_privilege_policy": "future/oracle ground truth offline teacher/reward only, never policy inference",
+  "history_new_user_ids": [
+    "U16",
+    "U17",
+    "U18",
+    "U19",
+    "U20",
+    "U21",
+    "U22",
+    "U23",
+    "U24",
+    "U25"
+  ],
+  "directed_unique_module_pairs": 52,
+  "dependency_records": 54
+}

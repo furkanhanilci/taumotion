@@ -1,0 +1,380 @@
+[
+  {
+    "from": "M00",
+    "to": "M01",
+    "payload": "allowlisted source manifest",
+    "id": "D01",
+    "scope": "ONLINE_OR_EVAL"
+  },
+  {
+    "from": "M01",
+    "to": "M02",
+    "payload": "scene and calibration",
+    "id": "D02",
+    "scope": "ONLINE_OR_EVAL"
+  },
+  {
+    "from": "M01",
+    "to": "M03",
+    "payload": "causal sensor history",
+    "id": "D03",
+    "scope": "ONLINE_OR_EVAL"
+  },
+  {
+    "from": "M01",
+    "to": "M07",
+    "payload": "native A input",
+    "id": "D04",
+    "scope": "ONLINE_OR_EVAL"
+  },
+  {
+    "from": "M01",
+    "to": "M08",
+    "payload": "native B input",
+    "id": "D05",
+    "scope": "ONLINE_OR_EVAL"
+  },
+  {
+    "from": "M02",
+    "to": "M05",
+    "payload": "pooled evidence features for student",
+    "id": "D06",
+    "scope": "ONLINE_OR_EVAL"
+  },
+  {
+    "from": "M03",
+    "to": "M04",
+    "payload": "structured semantic proposal",
+    "id": "D07",
+    "scope": "ONLINE_OR_EVAL"
+  },
+  {
+    "from": "M04",
+    "to": "M05",
+    "payload": "horizon labels / teacher representation",
+    "id": "D08",
+    "scope": "ONLINE_OR_EVAL"
+  },
+  {
+    "from": "M04",
+    "to": "M06",
+    "payload": "actor-linked claims",
+    "id": "D09",
+    "scope": "ONLINE_OR_EVAL"
+  },
+  {
+    "from": "M05",
+    "to": "M06",
+    "payload": "horizon claims and confidence",
+    "id": "D10",
+    "scope": "ONLINE_OR_EVAL"
+  },
+  {
+    "from": "M02",
+    "to": "M06",
+    "payload": "independent observations / forecasts",
+    "id": "D11",
+    "scope": "ONLINE_OR_EVAL"
+  },
+  {
+    "from": "M07",
+    "to": "M09",
+    "payload": "native A candidates",
+    "id": "D12",
+    "scope": "ONLINE_OR_EVAL"
+  },
+  {
+    "from": "M08",
+    "to": "M09",
+    "payload": "native B candidates",
+    "id": "D13",
+    "scope": "ONLINE_OR_EVAL"
+  },
+  {
+    "from": "M09",
+    "to": "M10",
+    "payload": "canonical candidate set",
+    "id": "D14",
+    "scope": "ONLINE_OR_EVAL"
+  },
+  {
+    "from": "M10",
+    "to": "M11",
+    "payload": "features and masks",
+    "id": "D15",
+    "scope": "ONLINE_OR_EVAL"
+  },
+  {
+    "from": "M06",
+    "to": "M11",
+    "payload": "grounded semantics",
+    "id": "D16",
+    "scope": "ONLINE_OR_EVAL"
+  },
+  {
+    "from": "M11",
+    "to": "M12",
+    "payload": "selected candidate and policy context",
+    "id": "D17",
+    "scope": "ONLINE_OR_EVAL"
+  },
+  {
+    "from": "M12",
+    "to": "M13",
+    "payload": "bounded proposal",
+    "id": "D18",
+    "scope": "ONLINE_OR_EVAL"
+  },
+  {
+    "from": "M13",
+    "to": "M14",
+    "payload": "accepted reference",
+    "id": "D19",
+    "scope": "ONLINE_OR_EVAL"
+  },
+  {
+    "from": "M14",
+    "to": "M13",
+    "payload": "solver failure / veto",
+    "id": "D20",
+    "scope": "ONLINE_OR_EVAL"
+  },
+  {
+    "from": "M14",
+    "to": "M11",
+    "payload": "previous tracking/slack/solver feedback",
+    "id": "D21",
+    "scope": "ONLINE_OR_EVAL"
+  },
+  {
+    "from": "M15",
+    "to": "M01",
+    "payload": "next environment observation",
+    "id": "D22",
+    "scope": "ONLINE_OR_EVAL"
+  },
+  {
+    "from": "M16",
+    "to": "M01",
+    "payload": "request timing and freshness",
+    "id": "D23",
+    "scope": "ONLINE_OR_EVAL"
+  },
+  {
+    "from": "M16",
+    "to": "M11",
+    "payload": "decision age / deadline",
+    "id": "D24",
+    "scope": "ONLINE_OR_EVAL"
+  },
+  {
+    "from": "M11",
+    "to": "M17",
+    "payload": "sampled action / logp",
+    "id": "D25",
+    "scope": "ONLINE_OR_EVAL"
+  },
+  {
+    "from": "M13",
+    "to": "M17",
+    "payload": "override / accepted reference",
+    "id": "D26",
+    "scope": "ONLINE_OR_EVAL"
+  },
+  {
+    "from": "M15",
+    "to": "M17",
+    "payload": "executed actuation",
+    "id": "D27",
+    "scope": "ONLINE_OR_EVAL"
+  },
+  {
+    "from": "M17",
+    "to": "M18",
+    "payload": "paired state / intervention trace",
+    "id": "D28",
+    "scope": "ONLINE_OR_EVAL"
+  },
+  {
+    "from": "M17",
+    "to": "M19",
+    "payload": "metrics and provenance",
+    "id": "D29",
+    "scope": "ONLINE_OR_EVAL"
+  },
+  {
+    "from": "M20",
+    "to": "M19",
+    "payload": "baseline comparable results",
+    "id": "D30",
+    "scope": "ONLINE_OR_EVAL"
+  },
+  {
+    "from": "M21",
+    "to": "M00",
+    "payload": "data and platform manifests",
+    "id": "D31",
+    "scope": "OFFLINE_ONLY"
+  },
+  {
+    "from": "M02",
+    "to": "M23",
+    "payload": "native tracks forecasts and original capture time",
+    "id": "D32",
+    "scope": "ONLINE_OR_EVAL"
+  },
+  {
+    "from": "M23",
+    "to": "M06",
+    "payload": "time-aligned evidence with observation lineage",
+    "id": "D33",
+    "scope": "ONLINE_OR_EVAL"
+  },
+  {
+    "from": "M23",
+    "to": "M10",
+    "payload": "aged evidence / uncertainty",
+    "id": "D34",
+    "scope": "ONLINE_OR_EVAL"
+  },
+  {
+    "from": "M23",
+    "to": "M13",
+    "payload": "current validity envelope",
+    "id": "D35",
+    "scope": "ONLINE_OR_EVAL"
+  },
+  {
+    "from": "M23",
+    "to": "M14",
+    "payload": "time-aligned forecast constraints",
+    "id": "D36",
+    "scope": "ONLINE_OR_EVAL"
+  },
+  {
+    "from": "M14",
+    "to": "M22",
+    "payload": "solver result with generation and deadline",
+    "id": "D37",
+    "scope": "ONLINE_OR_EVAL"
+  },
+  {
+    "from": "M16",
+    "to": "M22",
+    "payload": "clock profile and worker health",
+    "id": "D38",
+    "scope": "ONLINE_OR_EVAL"
+  },
+  {
+    "from": "M01",
+    "to": "M22",
+    "payload": "fresh ego and scene snapshot",
+    "id": "D39",
+    "scope": "ONLINE_OR_EVAL"
+  },
+  {
+    "from": "M23",
+    "to": "M22",
+    "payload": "evidence age and validity",
+    "id": "D40",
+    "scope": "ONLINE_OR_EVAL"
+  },
+  {
+    "from": "M13",
+    "to": "M22",
+    "payload": "reference validation",
+    "id": "D41",
+    "scope": "ONLINE_OR_EVAL"
+  },
+  {
+    "from": "M22",
+    "to": "M15",
+    "payload": "sole authorized normal or fallback command",
+    "id": "D42",
+    "scope": "ONLINE_OR_EVAL"
+  },
+  {
+    "from": "M22",
+    "to": "M17",
+    "payload": "deadline decision and late rejection",
+    "id": "D43",
+    "scope": "ONLINE_OR_EVAL"
+  },
+  {
+    "from": "M22",
+    "to": "M11",
+    "payload": "previous degraded mode / override",
+    "id": "D44",
+    "scope": "ONLINE_OR_EVAL"
+  },
+  {
+    "from": "M02",
+    "to": "M10",
+    "payload": "sensor visibility, actor forecast and uncertainty",
+    "scope": "ONLINE_OR_EVAL",
+    "id": "D45"
+  },
+  {
+    "from": "M06",
+    "to": "M10",
+    "payload": "grounded claims with occlusion and age",
+    "scope": "ONLINE_OR_EVAL",
+    "id": "D46"
+  },
+  {
+    "from": "M10",
+    "to": "M11",
+    "payload": "calibrated SafetyScoreBundle plus candidate features",
+    "scope": "ONLINE_OR_EVAL",
+    "id": "D47"
+  },
+  {
+    "from": "M21",
+    "to": "M10",
+    "payload": "OFFLINE ONLY teacher labels to critic trainer; frozen trained artifact deployed separately",
+    "scope": "OFFLINE_ONLY",
+    "id": "D48"
+  },
+  {
+    "from": "M21",
+    "to": "M06",
+    "payload": "OFFLINE ONLY visibility annotation and calibration",
+    "scope": "OFFLINE_ONLY",
+    "id": "D49"
+  },
+  {
+    "from": "M21",
+    "to": "M17",
+    "payload": "offline expert and teacher provenance/fingerprint",
+    "scope": "OFFLINE_ONLY",
+    "id": "D50"
+  },
+  {
+    "from": "M20",
+    "to": "M19",
+    "payload": "new native strong planner and privileged/same-sensor expert baselines",
+    "scope": "ONLINE_OR_EVAL",
+    "id": "D51"
+  },
+  {
+    "from": "M17",
+    "to": "M10",
+    "payload": "offline critic label and calibration cache metadata",
+    "scope": "OFFLINE_ONLY",
+    "id": "D52"
+  },
+  {
+    "from": "M10",
+    "to": "M17",
+    "payload": "critic per-head scores, calibration and validity",
+    "scope": "ONLINE_OR_EVAL",
+    "id": "D53"
+  },
+  {
+    "from": "M20",
+    "to": "M21",
+    "payload": "OFFLINE ONLY expert scenario recordings",
+    "scope": "OFFLINE_ONLY",
+    "id": "D54"
+  }
+]

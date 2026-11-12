@@ -1,0 +1,20 @@
+[
+  {
+    "file": "TAUMOTION_Final_Mimari_v1_0_2026-11-11.zip",
+    "bytes": 16704371,
+    "sha256": "7ef30095c58815fdb49f311d8c5e3ac7469218c81011a378d107393ac5e8f176",
+    "distribution": "LOCAL_ARCHIVE_NOT_IN_GIT"
+  },
+  {
+    "file": "TAUMOTION_v1_2_Expanded_Architecture_2026-11-11.zip",
+    "bytes": 26472988,
+    "sha256": "d55920ff3d9150d3a92a8a37aab29c4be40375b54cc46c7342bf225f9f6e293f",
+    "distribution": "LOCAL_ARCHIVE_NOT_IN_GIT"
+  },
+  {
+    "file": "taumotion_original_v1_1.zip",
+    "bytes": 1878932,
+    "sha256": "d2fb27e136532e7fd62fec808ad091123188e2d6a5151702a0e2744a940fbc68",
+    "distribution": "LOCAL_ARCHIVE_NOT_IN_GIT"
+  }
+]

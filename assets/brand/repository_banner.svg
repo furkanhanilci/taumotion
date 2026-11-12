@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1800" height="680" viewBox="0 0 1800 680" role="img"><title>τMOTION — evidence into motion</title>
+<rect x="0" y="0" width="1800" height="680" rx="0" fill="#071522" stroke="none"/>
+<path d="M 790 80 C 1080 -40 1250 180 1800 50" fill="none" stroke="#142d42" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 790 150 C 1080 30 1250 250 1800 120" fill="none" stroke="#142d42" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 790 220 C 1080 100 1250 320 1800 190" fill="none" stroke="#142d42" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 790 290 C 1080 170 1250 390 1800 260" fill="none" stroke="#142d42" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 790 360 C 1080 240 1250 460 1800 330" fill="none" stroke="#142d42" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 790 430 C 1080 310 1250 530 1800 400" fill="none" stroke="#142d42" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 790 500 C 1080 380 1250 600 1800 470" fill="none" stroke="#142d42" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 790 570 C 1080 450 1250 670 1800 540" fill="none" stroke="#142d42" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 1075 170 C 1075 172.761 1072.761 175 1070 175 C 1067.239 175 1065 172.761 1065 170 C 1065 167.239 1067.239 165 1070 165 C 1072.761 165 1075 167.239 1075 170 Z " fill="#2e6474" stroke="none" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 1083 170 C 1083 177.18 1077.18 183 1070 183 C 1062.82 183 1057 177.18 1057 170 C 1057 162.82 1062.82 157 1070 157 C 1077.18 157 1083 162.82 1083 170 Z " fill="none" stroke="#244353" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 1335 350 C 1335 352.761 1332.761 355 1330 355 C 1327.239 355 1325 352.761 1325 350 C 1325 347.239 1327.239 345 1330 345 C 1332.761 345 1335 347.239 1335 350 Z " fill="#2e6474" stroke="none" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 1343 350 C 1343 357.18 1337.18 363 1330 363 C 1322.82 363 1317 357.18 1317 350 C 1317 342.82 1322.82 337 1330 337 C 1337.18 337 1343 342.82 1343 350 Z " fill="none" stroke="#244353" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 1555 170 C 1555 172.761 1552.761 175 1550 175 C 1547.239 175 1545 172.761 1545 170 C 1545 167.239 1547.239 165 1550 165 C 1552.761 165 1555 167.239 1555 170 Z " fill="#2e6474" stroke="none" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 1563 170 C 1563 177.18 1557.18 183 1550 183 C 1542.82 183 1537 177.18 1537 170 C 1537 162.82 1542.82 157 1550 157 C 1557.18 157 1563 162.82 1563 170 Z " fill="none" stroke="#244353" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 1655 530 C 1655 532.761 1652.761 535 1650 535 C 1647.239 535 1645 532.761 1645 530 C 1645 527.239 1647.239 525 1650 525 C 1652.761 525 1655 527.239 1655 530 Z " fill="#2e6474" stroke="none" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 1663 530 C 1663 537.18 1657.18 543 1650 543 C 1642.82 543 1637 537.18 1637 530 C 1637 522.82 1642.82 517 1650 517 C 1657.18 517 1663 522.82 1663 530 Z " fill="none" stroke="#244353" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 80 76 L 80 40 L 116 40" fill="none" stroke="#365568" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 1684 640 L 1720 640 L 1720 604" fill="none" stroke="#365568" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<defs><linearGradient id="g19" gradientUnits="userSpaceOnUse" x1="159.60000000000002" y1="92.6" x2="555.2" y2="552.6"><stop offset="0.000" stop-color="#79f5d5"/><stop offset="0.500" stop-color="#24bfcc"/><stop offset="1.000" stop-color="#4c67f2"/></linearGradient></defs>
+<path d="M 155.0 147.8 C 196.4 110.08 233.2 92.6 283.8 92.6 L 671.12 92.6 L 619.6 177.24 L 490.8 177.24 L 449.4 385.16 C 434.68 456.92 466.88 481.76 539.56 448.64 L 578.2 430.24 L 557.96 525.92 C 509.2 552.6 452.16 567.32 404.32 547.08 C 348.2 524.08 322.44 478.08 338.08 400.8 L 385.0 177.24 L 254.36 177.24 C 218.48 177.24 189.96 189.2 162.36 208.52 Z " fill="url(#g19)" stroke="none" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 178.0 145.96 C 213.88 121.12 247.0 111.92 285.64 111.92 L 635.24 111.92 L 615.0 143.2 L 468.72 143.2 L 414.44 403.56 C 396.96 484.52 435.6 521.32 500.0 504.76 L 542.32 486.36 L 535.88 513.96 C 481.6 537.88 434.68 536.96 403.4 511.2 C 375.8 488.2 370.28 457.84 382.24 398.96 L 436.52 143.2 L 271.84 143.2 C 233.2 143.2 205.6 156.08 178.92 171.72 Z " fill="#c7fff0" stroke="none" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 209.28 131.24 C 233.2 120.2 258.04 116.52 286.56 116.52 L 624.2 116.52" fill="none" stroke="#f4fffc" stroke-width="2.0240000000000005" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="283.8" y="621.6" fill="#9bb1c6" font-family="DejaVu Sans,sans-serif" font-size="29.44" font-weight="700" letter-spacing="11.040000000000001">MOTION</text>
+<text x="850" y="190" fill="#71d9cd" font-family="DejaVu Sans,sans-serif" font-size="17" font-weight="700" letter-spacing="4">RESEARCH IN MOTION</text>
+<text x="846" y="281" fill="#eef7fd" font-family="DejaVu Sans,sans-serif" font-size="62" font-weight="700" letter-spacing="0">Evidence into</text>
+<text x="846" y="362" fill="#eef7fd" font-family="DejaVu Sans,sans-serif" font-size="62" font-weight="700" letter-spacing="0">intelligent motion.</text>
+<path d="M 850 410 L 1455 410" fill="none" stroke="#254559" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="850" y="458" fill="#a6bacc" font-family="DejaVu Sans,sans-serif" font-size="21" font-weight="400" letter-spacing="0">Dual planning · Grounded reasoning · Predictive control</text>
+<text x="850" y="547" fill="#8ca4ba" font-family="DejaVu Sans,sans-serif" font-size="15" font-weight="700" letter-spacing="2">ARCHITECTURE SPECIFICATION</text>
+<text x="850" y="583" fill="#718da5" font-family="DejaVu Sans,sans-serif" font-size="18" font-weight="400" letter-spacing="0">v1.1  /  24 components  /  preserved research scope</text>
+</svg>
