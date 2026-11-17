@@ -48,6 +48,18 @@ logo=R/release['approved_logo']
 check('Approved logo signature and exact SHA256',logo.read_bytes().startswith(b'\x89PNG\r\n\x1a\n') and hashlib.sha256(logo.read_bytes()).hexdigest()==release['approved_logo_sha256'])
 for p in ['README.md','README.tr.md']:
     check(p+' uses approved original and current diagram',release['approved_logo'] in read(p) and 'assets/diagrams/v1_3_1/main_architecture.svg' in read(p))
+    content=read(p)
+    images=re.findall(r'<img\b[^>]*\bsrc="([^"]+)"',content)
+    check(p+' opens with approved logo then scientific poster',images[:2]==[release['approved_logo'],'assets/diagrams/v1_3_1/architecture_poster.png'] and content.lstrip().startswith('<p align="center">'))
+    check(p+' uses generic scientific labels',not re.search(r'\b(?:Autoware|LEAD|Qwen|ReCogDrive|UniAD|AutoE2E|FPD-Drive|BridgeDrive|TorchRL|TensorDict|acados|CasADi|FilterPy|CARLA|Bench2Drive|NAVSIM|KITScenes|AlpaSim|NuRec|SimLingo)\b',content,re.I))
+walkthrough=read('docs/scientific-walkthrough.md').split('\n',2)[2].rstrip()
+check('README contains the complete scientific walkthrough',walkthrough in read('README.md'))
+poster=read('assets/diagrams/v1_3_1/architecture_poster.svg')
+poster_ids=set(re.findall(r'\bM\d{2}\b',poster))
+for first,last in re.findall(r'M(\d{2})[–-]M(\d{2})',poster):
+    poster_ids.update(f'M{i:02d}' for i in range(int(first),int(last)+1))
+check('Scientific poster covers all 24 modules',ids<=poster_ids)
+check('Scientific poster uses generic scientific labels',not re.search(r'\b(?:Autoware|LEAD|Qwen|ReCogDrive|UniAD|AutoE2E|FPD-Drive|BridgeDrive|CARLA)\b',poster,re.I))
 check('Current figure builder does not redraw logo','mark(self' not in read('tools/build_diagrams_current.py'))
 for p in sorted((R/'specs').glob('*.json')):
     try:json.loads(p.read_text());check('JSON parses: '+p.name,True)
@@ -59,7 +71,7 @@ for p in (R/'assets').rglob('*.svg'):
     try:ET.parse(p);count+=1
     except Exception as e:bad.append((str(p),str(e)))
 check('SVG XML parses',not bad,f'{count} SVG files; {bad}')
-for name in ['main_architecture','runtime_contract','learning_and_evidence']:
+for name in ['main_architecture','runtime_contract','learning_and_evidence','architecture_poster']:
     check('Current figure variants: '+name,all((R/f'assets/diagrams/v1_3_1/{name}.{ext}').is_file() for ext in ['svg','png','pdf']))
 missing=[]
 for p in sorted(list(R.glob('*.md'))+list((R/'docs').glob('*.md'))+list((R/'history').glob('*.md'))):

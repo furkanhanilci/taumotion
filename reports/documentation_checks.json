@@ -2,8 +2,8 @@
   "release": "1.3.1",
   "scope": "D0_DOCUMENTATION_ONLY",
   "all_documentation_checks_passed": true,
-  "count": 63,
-  "passed": 63,
+  "count": 71,
+  "passed": 71,
   "runtime_status": "NOT_RUN",
   "checks": [
     {
@@ -192,7 +192,42 @@
       "detail": ""
     },
     {
+      "check": "README.md opens with approved logo then scientific poster",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "README.md uses generic scientific labels",
+      "passed": true,
+      "detail": ""
+    },
+    {
       "check": "README.tr.md uses approved original and current diagram",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "README.tr.md opens with approved logo then scientific poster",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "README.tr.md uses generic scientific labels",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "README contains the complete scientific walkthrough",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Scientific poster covers all 24 modules",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Scientific poster uses generic scientific labels",
       "passed": true,
       "detail": ""
     },
@@ -274,7 +309,7 @@
     {
       "check": "SVG XML parses",
       "passed": true,
-      "detail": "24 SVG files; []"
+      "detail": "25 SVG files; []"
     },
     {
       "check": "Current figure variants: main_architecture",
@@ -288,6 +323,11 @@
     },
     {
       "check": "Current figure variants: learning_and_evidence",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Current figure variants: architecture_poster",
       "passed": true,
       "detail": ""
     },

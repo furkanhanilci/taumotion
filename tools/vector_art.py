@@ -41,9 +41,12 @@ class Vector:
             elif op[0]=='text':
                 _,x,y,t,sz,f,b,tr=op
                 c.setFont('BrandBold' if b else 'Brand',sz);c.setFillColor(HexColor(f))
-                if tr:
-                    tx=c.beginText(x,H-y);tx.setFont('BrandBold' if b else 'Brand',sz);tx.setCharSpace(tr);tx.textOut(t);c.drawText(tx)
-                else:c.drawString(x,H-y,t)
+                # PDF character spacing persists across text objects; reset it even at zero.
+                tx=c.beginText(x,H-y)
+                tx.setFont('BrandBold' if b else 'Brand',sz)
+                tx.setCharSpace(tr)
+                tx.textOut(t)
+                c.drawText(tx)
                 if svg is not None:svg.append(f'<text x="{x}" y="{y}" fill="{f}" font-family="DejaVu Sans,sans-serif" font-size="{sz}" font-weight="{700 if b else 400}" letter-spacing="{tr}">{escape(t)}</text>')
             else:
                 _,cmds,f,s,width,gr,dash=op;p=c.beginPath()

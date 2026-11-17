@@ -1,0 +1,429 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="3200" height="2220" viewBox="0 0 3200 2220" role="img"><title>τMOTION — scientific architecture: online driving and offline research</title>
+<defs><linearGradient id="g0" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="0" y2="2220"><stop offset="0.000" stop-color="#f1f0ff"/><stop offset="1.000" stop-color="#ffffff"/></linearGradient></defs>
+<path d="M 0 0 L 3200 0 L 3200 2220 L 0 2220 Z " fill="url(#g0)" stroke="none" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+<defs><linearGradient id="g1" gradientUnits="userSpaceOnUse" x1="0" y1="140" x2="1000" y2="140"><stop offset="0.000" stop-color="#c8c5f5"/><stop offset="1.000" stop-color="#f5f6ff"/></linearGradient></defs>
+<path d="M 0 155 C 470 22 680 188 1030 165 L 1030 190 C 670 208 400 80 0 210 Z " fill="url(#g1)" stroke="none" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="2680" y="80.0" width="27" height="40" rx="2" fill="#d5cff4" stroke="none"/>
+<rect x="2725" y="64.0" width="27" height="72" rx="2" fill="#d5cff4" stroke="none"/>
+<rect x="2770" y="74.0" width="27" height="52" rx="2" fill="#d5cff4" stroke="none"/>
+<rect x="2815" y="47.5" width="27" height="105" rx="2" fill="#d5cff4" stroke="none"/>
+<rect x="2860" y="60.0" width="27" height="80" rx="2" fill="#d5cff4" stroke="none"/>
+<rect x="2905" y="36.0" width="27" height="128" rx="2" fill="#d5cff4" stroke="none"/>
+<rect x="2950" y="66.0" width="27" height="68" rx="2" fill="#d5cff4" stroke="none"/>
+<rect x="2995" y="51.0" width="27" height="98" rx="2" fill="#d5cff4" stroke="none"/>
+<rect x="3040" y="76.5" width="27" height="47" rx="2" fill="#d5cff4" stroke="none"/>
+<rect x="3085" y="58.5" width="27" height="83" rx="2" fill="#d5cff4" stroke="none"/>
+<text x="1060" y="78" fill="#6432ac" font-family="DejaVu Sans,sans-serif" font-size="61" font-weight="700" letter-spacing="5">τMOTION</text>
+<text x="600" y="153" fill="#202544" font-family="DejaVu Sans,sans-serif" font-size="58" font-weight="700" letter-spacing="0">Hybrid Autonomous Driving Architecture</text>
+<text x="685" y="211" fill="#52617c" font-family="DejaVu Sans,sans-serif" font-size="29" font-weight="400" letter-spacing="0">Grounded reasoning  ·  Dual proposals  ·  Risk-aware learning  ·  Predictive control</text>
+<rect x="40" y="245" width="3120" height="54" rx="15" fill="#ffffff" stroke="#d9d2ed"/>
+<text x="64" y="281" fill="#6432ac" font-family="DejaVu Sans,sans-serif" font-size="23" font-weight="700" letter-spacing="0">ARCHITECTURE v1.3.1</text>
+<text x="525" y="281" fill="#52617c" font-family="DejaVu Sans,sans-serif" font-size="23" font-weight="400" letter-spacing="0">24 modules  /  two frozen motion generators  /  20 Hz control target  /  runtime evaluation pending</text>
+<rect x="30" y="320" width="3140" height="1150" rx="24" fill="#ffffff" stroke="#a799d0"/>
+<rect x="48" y="309" width="820" height="61" rx="20" fill="#6432ac" stroke="none"/>
+<text x="80" y="351" fill="#ffffff" font-family="DejaVu Sans,sans-serif" font-size="31" font-weight="700" letter-spacing="0">01   ONLINE DRIVING PIPELINE</text>
+<text x="915" y="350" fill="#52617c" font-family="DejaVu Sans,sans-serif" font-size="24" font-weight="400" letter-spacing="0">Concurrent inference branches; arrows show selected data dependencies.</text>
+<rect x="56" y="409" width="374" height="926" rx="18" fill="#e6e6f0" stroke="none"/>
+<rect x="52" y="402" width="374" height="926" rx="18" fill="#edf6ff" stroke="#1763aa"/>
+<defs><linearGradient id="g24" gradientUnits="userSpaceOnUse" x1="53" y1="403" x2="53" y2="513"><stop offset="0.000" stop-color="#1763aa"/><stop offset="1.000" stop-color="#1763aa"/></linearGradient></defs>
+<path d="M 53 403 L 425 403 L 425 513 L 53 513 Z " fill="url(#g24)" stroke="none" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="70" y="437" fill="#ffffff" font-family="DejaVu Sans,sans-serif" font-size="21" font-weight="700" letter-spacing="0">01   M00–M01</text>
+<text x="70" y="473" fill="#ffffff" font-family="DejaVu Sans,sans-serif" font-size="28" font-weight="700" letter-spacing="0">Inputs &amp;</text>
+<text x="70" y="504" fill="#ffffff" font-family="DejaVu Sans,sans-serif" font-size="28" font-weight="700" letter-spacing="0">synchronization</text>
+<rect x="64" y="532" width="350" height="219" rx="13" fill="#ffffff" stroke="#1763aa"/>
+<rect x="80" y="557" width="42" height="29" rx="5" fill="#ffffff" stroke="#1763aa"/>
+<path d="M 111 572 C 111 576.971 106.971 581 102 581 C 97.029 581 93 576.971 93 572 C 93 567.029 97.029 563 102 563 C 106.971 563 111 567.029 111 572 Z " fill="#ffffff" stroke="#1763aa" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 87 557 L 92 549 L 108 549 L 113 557" fill="none" stroke="#1763aa" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="140" y="567" fill="#202544" font-family="DejaVu Sans,sans-serif" font-size="25" font-weight="700" letter-spacing="0">Causal sensor</text>
+<text x="140" y="600.5" fill="#202544" font-family="DejaVu Sans,sans-serif" font-size="25" font-weight="700" letter-spacing="0">history</text>
+<text x="80" y="644" fill="#52617c" font-family="DejaVu Sans,sans-serif" font-size="23" font-weight="400" letter-spacing="0">Multi-camera images,</text>
+<text x="80" y="674.82" fill="#52617c" font-family="DejaVu Sans,sans-serif" font-size="23" font-weight="400" letter-spacing="0">calibration and native</text>
+<text x="80" y="705.6400000000001" fill="#52617c" font-family="DejaVu Sans,sans-serif" font-size="23" font-weight="400" letter-spacing="0">temporal sampling.</text>
+<rect x="64" y="767" width="350" height="219" rx="13" fill="#ffffff" stroke="#1763aa"/>
+<path d="M 80 799 C 93 776 106 814 124 784" fill="none" stroke="#1763aa" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 80 811 C 93 788 106 826 124 796" fill="none" stroke="#1763aa" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 80 823 C 93 800 106 838 124 808" fill="none" stroke="#1763aa" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="140" y="802" fill="#202544" font-family="DejaVu Sans,sans-serif" font-size="25" font-weight="700" letter-spacing="0">Ego &amp; route</text>
+<text x="140" y="835.5" fill="#202544" font-family="DejaVu Sans,sans-serif" font-size="25" font-weight="700" letter-spacing="0">context</text>
+<text x="80" y="879" fill="#52617c" font-family="DejaVu Sans,sans-serif" font-size="23" font-weight="400" letter-spacing="0">Pose, velocity,</text>
+<text x="80" y="909.82" fill="#52617c" font-family="DejaVu Sans,sans-serif" font-size="23" font-weight="400" letter-spacing="0">acceleration, steering state</text>
+<text x="80" y="940.6400000000001" fill="#52617c" font-family="DejaVu Sans,sans-serif" font-size="23" font-weight="400" letter-spacing="0">and permitted navigation.</text>
+<rect x="64" y="1002" width="350" height="219" rx="13" fill="#ffffff" stroke="#1763aa"/>
+<path d="M 122 1041 C 122 1052.046 113.046 1061 102 1061 C 90.954 1061 82 1052.046 82 1041 C 82 1029.954 90.954 1021 102 1021 C 113.046 1021 122 1029.954 122 1041 Z " fill="#ffffff" stroke="#1763aa" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 102 1027 L 102 1041 L 114 1045" fill="none" stroke="#1763aa" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="140" y="1037" fill="#202544" font-family="DejaVu Sans,sans-serif" font-size="25" font-weight="700" letter-spacing="0">Time &amp;</text>
+<text x="140" y="1070.5" fill="#202544" font-family="DejaVu Sans,sans-serif" font-size="25" font-weight="700" letter-spacing="0">provenance</text>
+<text x="80" y="1114" fill="#52617c" font-family="DejaVu Sans,sans-serif" font-size="23" font-weight="400" letter-spacing="0">Observation times, source</text>
+<text x="80" y="1144.82" fill="#52617c" font-family="DejaVu Sans,sans-serif" font-size="23" font-weight="400" letter-spacing="0">versions, valid masks and</text>
+<text x="80" y="1175.6399999999999" fill="#52617c" font-family="DejaVu Sans,sans-serif" font-size="23" font-weight="400" letter-spacing="0">data access rules.</text>
+<path d="M 426 920 L 442 920" fill="none" stroke="#6432ac" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 442 920 L 429.714 926.712 L 429.714 913.288 Z " fill="#6432ac" stroke="none" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="446" y="409" width="374" height="926" rx="18" fill="#e6e6f0" stroke="none"/>
+<rect x="442" y="402" width="374" height="926" rx="18" fill="#f6effd" stroke="#7b40ad"/>
+<defs><linearGradient id="g58" gradientUnits="userSpaceOnUse" x1="443" y1="403" x2="443" y2="513"><stop offset="0.000" stop-color="#7b40ad"/><stop offset="1.000" stop-color="#443472"/></linearGradient></defs>
+<path d="M 443 403 L 815 403 L 815 513 L 443 513 Z " fill="url(#g58)" stroke="none" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="460" y="437" fill="#ffffff" font-family="DejaVu Sans,sans-serif" font-size="21" font-weight="700" letter-spacing="0">02   M02 / M23</text>
+<text x="460" y="473" fill="#ffffff" font-family="DejaVu Sans,sans-serif" font-size="28" font-weight="700" letter-spacing="0">Independent</text>
+<text x="460" y="504" fill="#ffffff" font-family="DejaVu Sans,sans-serif" font-size="28" font-weight="700" letter-spacing="0">perception</text>
+<rect x="454" y="532" width="350" height="219" rx="13" fill="#ffffff" stroke="#7b40ad"/>
+<path d="M 470 559 L 492 549 L 514 559 L 492 569 L 470 559" fill="none" stroke="#7b40ad" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 470 571 L 492 561 L 514 571 L 492 581 L 470 571" fill="none" stroke="#7b40ad" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 470 583 L 492 573 L 514 583 L 492 593 L 470 583" fill="none" stroke="#7b40ad" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="530" y="567" fill="#202544" font-family="DejaVu Sans,sans-serif" font-size="25" font-weight="700" letter-spacing="0">BEV scene</text>
+<text x="530" y="600.5" fill="#202544" font-family="DejaVu Sans,sans-serif" font-size="25" font-weight="700" letter-spacing="0">evidence</text>
+<text x="470" y="644" fill="#52617c" font-family="DejaVu Sans,sans-serif" font-size="23" font-weight="400" letter-spacing="0">Object detection, actor</text>
+<text x="470" y="674.82" fill="#52617c" font-family="DejaVu Sans,sans-serif" font-size="23" font-weight="400" letter-spacing="0">tracking, drivable area and</text>
+<text x="470" y="705.6400000000001" fill="#52617c" font-family="DejaVu Sans,sans-serif" font-size="23" font-weight="400" letter-spacing="0">motion forecasts.</text>
+<rect x="454" y="767" width="350" height="250" rx="13" fill="#ffffff" stroke="#7b40ad"/>
+<path d="M 492 784 L 513 793 L 509 812 L 492 828 L 475 812 L 471 793 Z " fill="none" stroke="#7b40ad" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 481 804 L 490 813 L 503 797" fill="none" stroke="#7b40ad" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="530" y="802" fill="#202544" font-family="DejaVu Sans,sans-serif" font-size="25" font-weight="700" letter-spacing="0">Visibility &amp;</text>
+<text x="530" y="835.5" fill="#202544" font-family="DejaVu Sans,sans-serif" font-size="25" font-weight="700" letter-spacing="0">uncertainty</text>
+<text x="470" y="879" fill="#52617c" font-family="DejaVu Sans,sans-serif" font-size="23" font-weight="400" letter-spacing="0">Occluded is not absent.</text>
+<text x="470" y="909.82" fill="#52617c" font-family="DejaVu Sans,sans-serif" font-size="23" font-weight="400" letter-spacing="0">Keep association</text>
+<text x="470" y="940.6400000000001" fill="#52617c" font-family="DejaVu Sans,sans-serif" font-size="23" font-weight="400" letter-spacing="0">confidence and unknown</text>
+<text x="470" y="971.4600000000002" fill="#52617c" font-family="DejaVu Sans,sans-serif" font-size="23" font-weight="400" letter-spacing="0">regions.</text>
+<rect x="454" y="1033" width="350" height="219" rx="13" fill="#ffffff" stroke="#7b40ad"/>
+<path d="M 512 1072 C 512 1083.046 503.046 1092 492 1092 C 480.954 1092 472 1083.046 472 1072 C 472 1060.954 480.954 1052 492 1052 C 503.046 1052 512 1060.954 512 1072 Z " fill="#ffffff" stroke="#7b40ad" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 492 1058 L 492 1072 L 504 1076" fill="none" stroke="#7b40ad" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="530" y="1068" fill="#202544" font-family="DejaVu Sans,sans-serif" font-size="25" font-weight="700" letter-spacing="0">Evidence</text>
+<text x="530" y="1101.5" fill="#202544" font-family="DejaVu Sans,sans-serif" font-size="25" font-weight="700" letter-spacing="0">propagation</text>
+<text x="470" y="1145" fill="#52617c" font-family="DejaVu Sans,sans-serif" font-size="23" font-weight="400" letter-spacing="0">Retiming / filtering</text>
+<text x="470" y="1175.82" fill="#52617c" font-family="DejaVu Sans,sans-serif" font-size="23" font-weight="400" letter-spacing="0">preserves the original</text>
+<text x="470" y="1206.6399999999999" fill="#52617c" font-family="DejaVu Sans,sans-serif" font-size="23" font-weight="400" letter-spacing="0">observation timestamp.</text>
+<path d="M 816 920 L 832 920" fill="none" stroke="#6432ac" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 832 920 L 819.714 926.712 L 819.714 913.288 Z " fill="#6432ac" stroke="none" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="836" y="409" width="374" height="926" rx="18" fill="#e6e6f0" stroke="none"/>
+<rect x="832" y="402" width="374" height="926" rx="18" fill="#eef9f0" stroke="#278451"/>
+<defs><linearGradient id="g92" gradientUnits="userSpaceOnUse" x1="833" y1="403" x2="833" y2="513"><stop offset="0.000" stop-color="#278451"/><stop offset="1.000" stop-color="#278451"/></linearGradient></defs>
+<path d="M 833 403 L 1205 403 L 1205 513 L 833 513 Z " fill="url(#g92)" stroke="none" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="850" y="437" fill="#ffffff" font-family="DejaVu Sans,sans-serif" font-size="21" font-weight="700" letter-spacing="0">03   M03–M06</text>
+<text x="850" y="473" fill="#ffffff" font-family="DejaVu Sans,sans-serif" font-size="28" font-weight="700" letter-spacing="0">Grounded</text>
+<text x="850" y="504" fill="#ffffff" font-family="DejaVu Sans,sans-serif" font-size="28" font-weight="700" letter-spacing="0">reasoning</text>
+<rect x="844" y="532" width="350" height="219" rx="13" fill="#ffffff" stroke="#278451"/>
+<path d="M 860 569 L 881 549" fill="none" stroke="#278451" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 860 569 L 883 590" fill="none" stroke="#278451" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 881 549 L 903 569" fill="none" stroke="#278451" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 883 590 L 903 569" fill="none" stroke="#278451" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 860 569 L 903 569" fill="none" stroke="#278451" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 866 569 C 866 572.314 863.314 575 860 575 C 856.686 575 854 572.314 854 569 C 854 565.686 856.686 563 860 563 C 863.314 563 866 565.686 866 569 Z " fill="#ffffff" stroke="#278451" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 887 549 C 887 552.314 884.314 555 881 555 C 877.686 555 875 552.314 875 549 C 875 545.686 877.686 543 881 543 C 884.314 543 887 545.686 887 549 Z " fill="#ffffff" stroke="#278451" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 889 590 C 889 593.314 886.314 596 883 596 C 879.686 596 877 593.314 877 590 C 877 586.686 879.686 584 883 584 C 886.314 584 889 586.686 889 590 Z " fill="#ffffff" stroke="#278451" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 909 569 C 909 572.314 906.314 575 903 575 C 899.686 575 897 572.314 897 569 C 897 565.686 899.686 563 903 563 C 906.314 563 909 565.686 909 569 Z " fill="#ffffff" stroke="#278451" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="920" y="567" fill="#202544" font-family="DejaVu Sans,sans-serif" font-size="25" font-weight="700" letter-spacing="0">Vision–language</text>
+<text x="920" y="600.5" fill="#202544" font-family="DejaVu Sans,sans-serif" font-size="25" font-weight="700" letter-spacing="0">reasoning</text>
+<text x="860" y="644" fill="#52617c" font-family="DejaVu Sans,sans-serif" font-size="23" font-weight="400" letter-spacing="0">Scene meaning, actor</text>
+<text x="860" y="674.82" fill="#52617c" font-family="DejaVu Sans,sans-serif" font-size="23" font-weight="400" letter-spacing="0">intent, rules and a</text>
+<text x="860" y="705.6400000000001" fill="#52617c" font-family="DejaVu Sans,sans-serif" font-size="23" font-weight="400" letter-spacing="0">structured rationale.</text>
+<rect x="844" y="767" width="350" height="187" rx="13" fill="#ffffff" stroke="#278451"/>
+<path d="M 860 794 L 882 784 L 904 794 L 882 804 L 860 794" fill="none" stroke="#278451" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 860 806 L 882 796 L 904 806 L 882 816 L 860 806" fill="none" stroke="#278451" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 860 818 L 882 808 L 904 818 L 882 828 L 860 818" fill="none" stroke="#278451" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="920" y="802" fill="#202544" font-family="DejaVu Sans,sans-serif" font-size="25" font-weight="700" letter-spacing="0">Horizon reasoning</text>
+<text x="860" y="847" fill="#52617c" font-family="DejaVu Sans,sans-serif" font-size="23" font-weight="400" letter-spacing="0">Actor / hazard / cause /</text>
+<text x="860" y="877.82" fill="#52617c" font-family="DejaVu Sans,sans-serif" font-size="23" font-weight="400" letter-spacing="0">action claims for now</text>
+<text x="860" y="908.6400000000001" fill="#52617c" font-family="DejaVu Sans,sans-serif" font-size="23" font-weight="400" letter-spacing="0">through +4 seconds.</text>
+<rect x="844" y="970" width="350" height="219" rx="13" fill="#ffffff" stroke="#278451"/>
+<path d="M 882 987 L 903 996 L 899 1015 L 882 1031 L 865 1015 L 861 996 Z " fill="none" stroke="#278451" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 871 1007 L 880 1016 L 893 1000" fill="none" stroke="#278451" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="920" y="1005" fill="#202544" font-family="DejaVu Sans,sans-serif" font-size="25" font-weight="700" letter-spacing="0">Evidence</text>
+<text x="920" y="1038.5" fill="#202544" font-family="DejaVu Sans,sans-serif" font-size="25" font-weight="700" letter-spacing="0">grounding</text>
+<text x="860" y="1082" fill="#52617c" font-family="DejaVu Sans,sans-serif" font-size="23" font-weight="400" letter-spacing="0">Supported, contradicted,</text>
+<text x="860" y="1112.82" fill="#52617c" font-family="DejaVu Sans,sans-serif" font-size="23" font-weight="400" letter-spacing="0">unknown, conflict or stale;</text>
+<text x="860" y="1143.6399999999999" fill="#52617c" font-family="DejaVu Sans,sans-serif" font-size="23" font-weight="400" letter-spacing="0">calibrated claim masks.</text>
+<rect x="1226" y="409" width="374" height="926" rx="18" fill="#e6e6f0" stroke="none"/>
+<rect x="1222" y="402" width="374" height="926" rx="18" fill="#fff0fa" stroke="#b43b91"/>
+<defs><linearGradient id="g129" gradientUnits="userSpaceOnUse" x1="1223" y1="403" x2="1223" y2="513"><stop offset="0.000" stop-color="#b43b91"/><stop offset="1.000" stop-color="#443472"/></linearGradient></defs>
+<path d="M 1223 403 L 1595 403 L 1595 513 L 1223 513 Z " fill="url(#g129)" stroke="none" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="1240" y="437" fill="#ffffff" font-family="DejaVu Sans,sans-serif" font-size="21" font-weight="700" letter-spacing="0">04   M07–M09</text>
+<text x="1240" y="473" fill="#ffffff" font-family="DejaVu Sans,sans-serif" font-size="28" font-weight="700" letter-spacing="0">Dual motion</text>
+<text x="1240" y="504" fill="#ffffff" font-family="DejaVu Sans,sans-serif" font-size="28" font-weight="700" letter-spacing="0">generation</text>
+<rect x="1234" y="532" width="350" height="218" rx="13" fill="#ffffff" stroke="#b43b91"/>
+<path d="M 1250 564 C 1263 541 1276 579 1294 549" fill="none" stroke="#b43b91" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 1250 576 C 1263 553 1276 591 1294 561" fill="none" stroke="#b43b91" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 1250 588 C 1263 565 1276 603 1294 573" fill="none" stroke="#b43b91" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="1310" y="567" fill="#202544" font-family="DejaVu Sans,sans-serif" font-size="25" font-weight="700" letter-spacing="0">A · Flow matching</text>
+<text x="1250" y="612" fill="#52617c" font-family="DejaVu Sans,sans-serif" font-size="23" font-weight="400" letter-spacing="0">Frozen conditional</text>
+<text x="1250" y="642.82" fill="#52617c" font-family="DejaVu Sans,sans-serif" font-size="23" font-weight="400" letter-spacing="0">trajectory generation;</text>
+<text x="1250" y="673.6400000000001" fill="#52617c" font-family="DejaVu Sans,sans-serif" font-size="23" font-weight="400" letter-spacing="0">seeded multimodal</text>
+<text x="1250" y="704.4600000000002" fill="#52617c" font-family="DejaVu Sans,sans-serif" font-size="23" font-weight="400" letter-spacing="0">proposals.</text>
+<rect x="1234" y="766" width="350" height="187" rx="13" fill="#ffffff" stroke="#b43b91"/>
+<path d="M 1250 803 L 1271 783" fill="none" stroke="#b43b91" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 1250 803 L 1273 824" fill="none" stroke="#b43b91" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 1271 783 L 1293 803" fill="none" stroke="#b43b91" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 1273 824 L 1293 803" fill="none" stroke="#b43b91" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 1250 803 L 1293 803" fill="none" stroke="#b43b91" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 1256 803 C 1256 806.314 1253.314 809 1250 809 C 1246.686 809 1244 806.314 1244 803 C 1244 799.686 1246.686 797 1250 797 C 1253.314 797 1256 799.686 1256 803 Z " fill="#ffffff" stroke="#b43b91" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 1277 783 C 1277 786.314 1274.314 789 1271 789 C 1267.686 789 1265 786.314 1265 783 C 1265 779.686 1267.686 777 1271 777 C 1274.314 777 1277 779.686 1277 783 Z " fill="#ffffff" stroke="#b43b91" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 1279 824 C 1279 827.314 1276.314 830 1273 830 C 1269.686 830 1267 827.314 1267 824 C 1267 820.686 1269.686 818 1273 818 C 1276.314 818 1279 820.686 1279 824 Z " fill="#ffffff" stroke="#b43b91" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 1299 803 C 1299 806.314 1296.314 809 1293 809 C 1289.686 809 1287 806.314 1287 803 C 1287 799.686 1289.686 797 1293 797 C 1296.314 797 1299 799.686 1299 803 Z " fill="#ffffff" stroke="#b43b91" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="1310" y="801" fill="#202544" font-family="DejaVu Sans,sans-serif" font-size="25" font-weight="700" letter-spacing="0">B · Diffusion</text>
+<text x="1250" y="846" fill="#52617c" font-family="DejaVu Sans,sans-serif" font-size="23" font-weight="400" letter-spacing="0">Frozen iterative denoising</text>
+<text x="1250" y="876.82" fill="#52617c" font-family="DejaVu Sans,sans-serif" font-size="23" font-weight="400" letter-spacing="0">planner; complementary</text>
+<text x="1250" y="907.6400000000001" fill="#52617c" font-family="DejaVu Sans,sans-serif" font-size="23" font-weight="400" letter-spacing="0">candidate trajectories.</text>
+<rect x="1234" y="969" width="350" height="250" rx="13" fill="#ffffff" stroke="#b43b91"/>
+<path d="M 1250 996 L 1272 986 L 1294 996 L 1272 1006 L 1250 996" fill="none" stroke="#b43b91" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 1250 1008 L 1272 998 L 1294 1008 L 1272 1018 L 1250 1008" fill="none" stroke="#b43b91" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 1250 1020 L 1272 1010 L 1294 1020 L 1272 1030 L 1250 1020" fill="none" stroke="#b43b91" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="1310" y="1004" fill="#202544" font-family="DejaVu Sans,sans-serif" font-size="25" font-weight="700" letter-spacing="0">Canonical</text>
+<text x="1310" y="1037.5" fill="#202544" font-family="DejaVu Sans,sans-serif" font-size="25" font-weight="700" letter-spacing="0">candidate pool</text>
+<text x="1250" y="1081" fill="#52617c" font-family="DejaVu Sans,sans-serif" font-size="23" font-weight="400" letter-spacing="0">Nominal K=6 (3+3);</text>
+<text x="1250" y="1111.82" fill="#52617c" font-family="DejaVu Sans,sans-serif" font-size="23" font-weight="400" letter-spacing="0">common frame, valid time</text>
+<text x="1250" y="1142.6399999999999" fill="#52617c" font-family="DejaVu Sans,sans-serif" font-size="23" font-weight="400" letter-spacing="0">overlap and native</text>
+<text x="1250" y="1173.4599999999998" fill="#52617c" font-family="DejaVu Sans,sans-serif" font-size="23" font-weight="400" letter-spacing="0">provenance.</text>
+<path d="M 1596 920 L 1612 920" fill="none" stroke="#6432ac" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 1612 920 L 1599.714 926.712 L 1599.714 913.288 Z " fill="#6432ac" stroke="none" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="1616" y="409" width="374" height="926" rx="18" fill="#e6e6f0" stroke="none"/>
+<rect x="1612" y="402" width="374" height="926" rx="18" fill="#fff7e6" stroke="#ad761b"/>
+<defs><linearGradient id="g170" gradientUnits="userSpaceOnUse" x1="1613" y1="403" x2="1613" y2="513"><stop offset="0.000" stop-color="#ad761b"/><stop offset="1.000" stop-color="#ad761b"/></linearGradient></defs>
+<path d="M 1613 403 L 1985 403 L 1985 513 L 1613 513 Z " fill="url(#g170)" stroke="none" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="1630" y="437" fill="#ffffff" font-family="DejaVu Sans,sans-serif" font-size="21" font-weight="700" letter-spacing="0">05   M10</text>
+<text x="1630" y="473" fill="#ffffff" font-family="DejaVu Sans,sans-serif" font-size="28" font-weight="700" letter-spacing="0">Candidate</text>
+<text x="1630" y="504" fill="#ffffff" font-family="DejaVu Sans,sans-serif" font-size="28" font-weight="700" letter-spacing="0">evaluation</text>
+<rect x="1624" y="532" width="350" height="187" rx="13" fill="#ffffff" stroke="#ad761b"/>
+<path d="M 1640 559 L 1662 549 L 1684 559 L 1662 569 L 1640 559" fill="none" stroke="#ad761b" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 1640 571 L 1662 561 L 1684 571 L 1662 581 L 1640 571" fill="none" stroke="#ad761b" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 1640 583 L 1662 573 L 1684 583 L 1662 593 L 1640 583" fill="none" stroke="#ad761b" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="1700" y="567" fill="#202544" font-family="DejaVu Sans,sans-serif" font-size="25" font-weight="700" letter-spacing="0">Physical features</text>
+<text x="1640" y="612" fill="#52617c" font-family="DejaVu Sans,sans-serif" font-size="23" font-weight="400" letter-spacing="0">Collision geometry, TTC,</text>
+<text x="1640" y="642.82" fill="#52617c" font-family="DejaVu Sans,sans-serif" font-size="23" font-weight="400" letter-spacing="0">road area, progress,</text>
+<text x="1640" y="673.6400000000001" fill="#52617c" font-family="DejaVu Sans,sans-serif" font-size="23" font-weight="400" letter-spacing="0">comfort and control proxy.</text>
+<rect x="1624" y="735" width="350" height="219" rx="13" fill="#ffffff" stroke="#ad761b"/>
+<path d="M 1662 752 L 1683 761 L 1679 780 L 1662 796 L 1645 780 L 1641 761 Z " fill="none" stroke="#ad761b" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 1651 772 L 1660 781 L 1673 765" fill="none" stroke="#ad761b" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="1700" y="770" fill="#202544" font-family="DejaVu Sans,sans-serif" font-size="25" font-weight="700" letter-spacing="0">Learned safety</text>
+<text x="1700" y="803.5" fill="#202544" font-family="DejaVu Sans,sans-serif" font-size="25" font-weight="700" letter-spacing="0">critic</text>
+<text x="1640" y="847" fill="#52617c" font-family="DejaVu Sans,sans-serif" font-size="23" font-weight="400" letter-spacing="0">Typed multihead outputs</text>
+<text x="1640" y="877.82" fill="#52617c" font-family="DejaVu Sans,sans-serif" font-size="23" font-weight="400" letter-spacing="0">with ranking supervision</text>
+<text x="1640" y="908.6400000000001" fill="#52617c" font-family="DejaVu Sans,sans-serif" font-size="23" font-weight="400" letter-spacing="0">and calibration.</text>
+<rect x="1624" y="970" width="350" height="187" rx="13" fill="#ffffff" stroke="#ad761b"/>
+<path d="M 1682 1009 C 1682 1020.046 1673.046 1029 1662 1029 C 1650.954 1029 1642 1020.046 1642 1009 C 1642 997.954 1650.954 989 1662 989 C 1673.046 989 1682 997.954 1682 1009 Z " fill="#ffffff" stroke="#ad761b" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 1662 995 L 1662 1009 L 1674 1013" fill="none" stroke="#ad761b" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="1700" y="1005" fill="#202544" font-family="DejaVu Sans,sans-serif" font-size="25" font-weight="700" letter-spacing="0">Control feasibility</text>
+<text x="1640" y="1050" fill="#52617c" font-family="DejaVu Sans,sans-serif" font-size="23" font-weight="400" letter-spacing="0">Evaluate age, valid horizon</text>
+<text x="1640" y="1080.82" fill="#52617c" font-family="DejaVu Sans,sans-serif" font-size="23" font-weight="400" letter-spacing="0">and physical limits; retain</text>
+<text x="1640" y="1111.6399999999999" fill="#52617c" font-family="DejaVu Sans,sans-serif" font-size="23" font-weight="400" letter-spacing="0">per-head uncertainty.</text>
+<path d="M 1986 920 L 2002 920" fill="none" stroke="#6432ac" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 2002 920 L 1989.714 926.712 L 1989.714 913.288 Z " fill="#6432ac" stroke="none" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="2006" y="409" width="374" height="926" rx="18" fill="#e6e6f0" stroke="none"/>
+<rect x="2002" y="402" width="374" height="926" rx="18" fill="#f5efff" stroke="#7438b6"/>
+<defs><linearGradient id="g201" gradientUnits="userSpaceOnUse" x1="2003" y1="403" x2="2003" y2="513"><stop offset="0.000" stop-color="#7438b6"/><stop offset="1.000" stop-color="#443472"/></linearGradient></defs>
+<path d="M 2003 403 L 2375 403 L 2375 513 L 2003 513 Z " fill="url(#g201)" stroke="none" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="2020" y="437" fill="#ffffff" font-family="DejaVu Sans,sans-serif" font-size="21" font-weight="700" letter-spacing="0">06   M11</text>
+<text x="2020" y="473" fill="#ffffff" font-family="DejaVu Sans,sans-serif" font-size="28" font-weight="700" letter-spacing="0">Risk-aware</text>
+<text x="2020" y="504" fill="#ffffff" font-family="DejaVu Sans,sans-serif" font-size="28" font-weight="700" letter-spacing="0">decision</text>
+<rect x="2014" y="532" width="350" height="187" rx="13" fill="#ffffff" stroke="#7438b6"/>
+<path d="M 2030 569 L 2051 549" fill="none" stroke="#7438b6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 2030 569 L 2053 590" fill="none" stroke="#7438b6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 2051 549 L 2073 569" fill="none" stroke="#7438b6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 2053 590 L 2073 569" fill="none" stroke="#7438b6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 2030 569 L 2073 569" fill="none" stroke="#7438b6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 2036 569 C 2036 572.314 2033.314 575 2030 575 C 2026.686 575 2024 572.314 2024 569 C 2024 565.686 2026.686 563 2030 563 C 2033.314 563 2036 565.686 2036 569 Z " fill="#ffffff" stroke="#7438b6" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 2057 549 C 2057 552.314 2054.314 555 2051 555 C 2047.686 555 2045 552.314 2045 549 C 2045 545.686 2047.686 543 2051 543 C 2054.314 543 2057 545.686 2057 549 Z " fill="#ffffff" stroke="#7438b6" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 2059 590 C 2059 593.314 2056.314 596 2053 596 C 2049.686 596 2047 593.314 2047 590 C 2047 586.686 2049.686 584 2053 584 C 2056.314 584 2059 586.686 2059 590 Z " fill="#ffffff" stroke="#7438b6" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 2079 569 C 2079 572.314 2076.314 575 2073 575 C 2069.686 575 2067 572.314 2067 569 C 2067 565.686 2069.686 563 2073 563 C 2076.314 563 2079 565.686 2079 569 Z " fill="#ffffff" stroke="#7438b6" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="2090" y="567" fill="#202544" font-family="DejaVu Sans,sans-serif" font-size="25" font-weight="700" letter-spacing="0">Recurrent policy</text>
+<text x="2030" y="612" fill="#52617c" font-family="DejaVu Sans,sans-serif" font-size="23" font-weight="400" letter-spacing="0">Candidate attention +</text>
+<text x="2030" y="642.82" fill="#52617c" font-family="DejaVu Sans,sans-serif" font-size="23" font-weight="400" letter-spacing="0">GRU; evidence-gated</text>
+<text x="2030" y="673.6400000000001" fill="#52617c" font-family="DejaVu Sans,sans-serif" font-size="23" font-weight="400" letter-spacing="0">semantic features.</text>
+<rect x="2014" y="735" width="350" height="187" rx="13" fill="#ffffff" stroke="#7438b6"/>
+<path d="M 2030 767 C 2043 744 2056 782 2074 752" fill="none" stroke="#7438b6" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 2030 779 C 2043 756 2056 794 2074 764" fill="none" stroke="#7438b6" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 2030 791 C 2043 768 2056 806 2074 776" fill="none" stroke="#7438b6" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="2090" y="770" fill="#202544" font-family="DejaVu Sans,sans-serif" font-size="25" font-weight="700" letter-spacing="0">Hybrid PPO action</text>
+<text x="2030" y="815" fill="#52617c" font-family="DejaVu Sans,sans-serif" font-size="23" font-weight="400" letter-spacing="0">Select candidate j and its</text>
+<text x="2030" y="845.82" fill="#52617c" font-family="DejaVu Sans,sans-serif" font-size="23" font-weight="400" letter-spacing="0">conditional bounded</text>
+<text x="2030" y="876.6400000000001" fill="#52617c" font-family="DejaVu Sans,sans-serif" font-size="23" font-weight="400" letter-spacing="0">residual distribution.</text>
+<rect x="2014" y="938" width="350" height="187" rx="13" fill="#ffffff" stroke="#7438b6"/>
+<path d="M 2052 955 L 2073 964 L 2069 983 L 2052 999 L 2035 983 L 2031 964 Z " fill="none" stroke="#7438b6" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 2041 975 L 2050 984 L 2063 968" fill="none" stroke="#7438b6" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="2090" y="973" fill="#202544" font-family="DejaVu Sans,sans-serif" font-size="25" font-weight="700" letter-spacing="0">Episode tail risk</text>
+<text x="2030" y="1018" fill="#52617c" font-family="DejaVu Sans,sans-serif" font-size="23" font-weight="400" letter-spacing="0">CVaR objective during</text>
+<text x="2030" y="1048.82" fill="#52617c" font-family="DejaVu Sans,sans-serif" font-size="23" font-weight="400" letter-spacing="0">policy learning; separate</text>
+<text x="2030" y="1079.6399999999999" fill="#52617c" font-family="DejaVu Sans,sans-serif" font-size="23" font-weight="400" letter-spacing="0">reward and cost values.</text>
+<text x="2026" y="1183" fill="#7438b6" font-family="DejaVu Sans,sans-serif" font-size="32" font-weight="700" letter-spacing="0">π(j, r | s)</text>
+<text x="2026" y="1224" fill="#52617c" font-family="DejaVu Sans,sans-serif" font-size="23" font-weight="400" letter-spacing="0">Small trainable policy;</text>
+<text x="2026" y="1254.82" fill="#52617c" font-family="DejaVu Sans,sans-serif" font-size="23" font-weight="400" letter-spacing="0">large generators stay</text>
+<text x="2026" y="1285.6399999999999" fill="#52617c" font-family="DejaVu Sans,sans-serif" font-size="23" font-weight="400" letter-spacing="0">frozen.</text>
+<path d="M 2376 920 L 2392 920" fill="none" stroke="#6432ac" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 2392 920 L 2379.714 926.712 L 2379.714 913.288 Z " fill="#6432ac" stroke="none" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="2396" y="409" width="374" height="926" rx="18" fill="#e6e6f0" stroke="none"/>
+<rect x="2392" y="402" width="374" height="926" rx="18" fill="#eef7ff" stroke="#2674a6"/>
+<defs><linearGradient id="g242" gradientUnits="userSpaceOnUse" x1="2393" y1="403" x2="2393" y2="513"><stop offset="0.000" stop-color="#2674a6"/><stop offset="1.000" stop-color="#2674a6"/></linearGradient></defs>
+<path d="M 2393 403 L 2765 403 L 2765 513 L 2393 513 Z " fill="url(#g242)" stroke="none" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="2410" y="437" fill="#ffffff" font-family="DejaVu Sans,sans-serif" font-size="21" font-weight="700" letter-spacing="0">07   M12–M14 / M22</text>
+<text x="2410" y="473" fill="#ffffff" font-family="DejaVu Sans,sans-serif" font-size="28" font-weight="700" letter-spacing="0">Refinement</text>
+<text x="2410" y="504" fill="#ffffff" font-family="DejaVu Sans,sans-serif" font-size="28" font-weight="700" letter-spacing="0">&amp; control</text>
+<rect x="2404" y="532" width="350" height="156" rx="13" fill="#ffffff" stroke="#2674a6"/>
+<path d="M 2420 564 C 2433 541 2446 579 2464 549" fill="none" stroke="#2674a6" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 2420 576 C 2433 553 2446 591 2464 561" fill="none" stroke="#2674a6" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 2420 588 C 2433 565 2446 603 2464 573" fill="none" stroke="#2674a6" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="2480" y="567" fill="#202544" font-family="DejaVu Sans,sans-serif" font-size="25" font-weight="700" letter-spacing="0">8D residual</text>
+<text x="2420" y="612" fill="#52617c" font-family="DejaVu Sans,sans-serif" font-size="23" font-weight="400" letter-spacing="0">4 speed + 4 lateral knots;</text>
+<text x="2420" y="642.82" fill="#52617c" font-family="DejaVu Sans,sans-serif" font-size="23" font-weight="400" letter-spacing="0">smooth correction.</text>
+<rect x="2404" y="704" width="350" height="187" rx="13" fill="#ffffff" stroke="#2674a6"/>
+<path d="M 2442 721 L 2463 730 L 2459 749 L 2442 765 L 2425 749 L 2421 730 Z " fill="none" stroke="#2674a6" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 2431 741 L 2440 750 L 2453 734" fill="none" stroke="#2674a6" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="2480" y="739" fill="#202544" font-family="DejaVu Sans,sans-serif" font-size="25" font-weight="700" letter-spacing="0">Feasibility gate</text>
+<text x="2420" y="784" fill="#52617c" font-family="DejaVu Sans,sans-serif" font-size="23" font-weight="400" letter-spacing="0">Check fresh scene</text>
+<text x="2420" y="814.82" fill="#52617c" font-family="DejaVu Sans,sans-serif" font-size="23" font-weight="400" letter-spacing="0">evidence, road and vehicle</text>
+<text x="2420" y="845.6400000000001" fill="#52617c" font-family="DejaVu Sans,sans-serif" font-size="23" font-weight="400" letter-spacing="0">limits.</text>
+<rect x="2404" y="907" width="350" height="187" rx="13" fill="#ffffff" stroke="#2674a6"/>
+<path d="M 2420 934 L 2442 924 L 2464 934 L 2442 944 L 2420 934" fill="none" stroke="#2674a6" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 2420 946 L 2442 936 L 2464 946 L 2442 956 L 2420 946" fill="none" stroke="#2674a6" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 2420 958 L 2442 948 L 2464 958 L 2442 968 L 2420 958" fill="none" stroke="#2674a6" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="2480" y="942" fill="#202544" font-family="DejaVu Sans,sans-serif" font-size="25" font-weight="700" letter-spacing="0">Dynamic NMPC</text>
+<text x="2420" y="987" fill="#52617c" font-family="DejaVu Sans,sans-serif" font-size="23" font-weight="400" letter-spacing="0">Constrained vehicle</text>
+<text x="2420" y="1017.82" fill="#52617c" font-family="DejaVu Sans,sans-serif" font-size="23" font-weight="400" letter-spacing="0">dynamics;</text>
+<text x="2420" y="1048.64" fill="#52617c" font-family="DejaVu Sans,sans-serif" font-size="23" font-weight="400" letter-spacing="0">receding-horizon tracking.</text>
+<rect x="2404" y="1110" width="350" height="187" rx="13" fill="#ffffff" stroke="#2674a6"/>
+<path d="M 2462 1149 C 2462 1160.046 2453.046 1169 2442 1169 C 2430.954 1169 2422 1160.046 2422 1149 C 2422 1137.954 2430.954 1129 2442 1129 C 2453.046 1129 2462 1137.954 2462 1149 Z " fill="#ffffff" stroke="#2674a6" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 2442 1135 L 2442 1149 L 2454 1153" fill="none" stroke="#2674a6" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="2480" y="1145" fill="#202544" font-family="DejaVu Sans,sans-serif" font-size="25" font-weight="700" letter-spacing="0">Deadline guardian</text>
+<text x="2420" y="1190" fill="#52617c" font-family="DejaVu Sans,sans-serif" font-size="23" font-weight="400" letter-spacing="0">Independent timing gate;</text>
+<text x="2420" y="1220.82" fill="#52617c" font-family="DejaVu Sans,sans-serif" font-size="23" font-weight="400" letter-spacing="0">reject late results;</text>
+<text x="2420" y="1251.6399999999999" fill="#52617c" font-family="DejaVu Sans,sans-serif" font-size="23" font-weight="400" letter-spacing="0">authorize fallback.</text>
+<path d="M 2766 920 L 2782 920" fill="none" stroke="#6432ac" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 2782 920 L 2769.714 926.712 L 2769.714 913.288 Z " fill="#6432ac" stroke="none" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="2786" y="409" width="374" height="926" rx="18" fill="#e6e6f0" stroke="none"/>
+<rect x="2782" y="402" width="374" height="926" rx="18" fill="#eef5ff" stroke="#205e9e"/>
+<defs><linearGradient id="g279" gradientUnits="userSpaceOnUse" x1="2783" y1="403" x2="2783" y2="513"><stop offset="0.000" stop-color="#205e9e"/><stop offset="1.000" stop-color="#205e9e"/></linearGradient></defs>
+<path d="M 2783 403 L 3155 403 L 3155 513 L 2783 513 Z " fill="url(#g279)" stroke="none" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="2800" y="437" fill="#ffffff" font-family="DejaVu Sans,sans-serif" font-size="21" font-weight="700" letter-spacing="0">08   M15 / M17–M18</text>
+<text x="2800" y="473" fill="#ffffff" font-family="DejaVu Sans,sans-serif" font-size="28" font-weight="700" letter-spacing="0">Execution</text>
+<text x="2800" y="504" fill="#ffffff" font-family="DejaVu Sans,sans-serif" font-size="28" font-weight="700" letter-spacing="0">&amp; explanation</text>
+<rect x="2794" y="532" width="350" height="219" rx="13" fill="#ffffff" stroke="#205e9e"/>
+<path d="M 2832 549 L 2853 558 L 2849 577 L 2832 593 L 2815 577 L 2811 558 Z " fill="none" stroke="#205e9e" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 2821 569 L 2830 578 L 2843 562" fill="none" stroke="#205e9e" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="2870" y="567" fill="#202544" font-family="DejaVu Sans,sans-serif" font-size="25" font-weight="700" letter-spacing="0">Single command</text>
+<text x="2870" y="600.5" fill="#202544" font-family="DejaVu Sans,sans-serif" font-size="25" font-weight="700" letter-spacing="0">writer</text>
+<text x="2810" y="644" fill="#52617c" font-family="DejaVu Sans,sans-serif" font-size="23" font-weight="400" letter-spacing="0">Calibrated steering,</text>
+<text x="2810" y="674.82" fill="#52617c" font-family="DejaVu Sans,sans-serif" font-size="23" font-weight="400" letter-spacing="0">throttle and brake; one</text>
+<text x="2810" y="705.6400000000001" fill="#52617c" font-family="DejaVu Sans,sans-serif" font-size="23" font-weight="400" letter-spacing="0">actuation authority.</text>
+<rect x="2794" y="767" width="350" height="187" rx="13" fill="#ffffff" stroke="#205e9e"/>
+<path d="M 2810 794 L 2832 784 L 2854 794 L 2832 804 L 2810 794" fill="none" stroke="#205e9e" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 2810 806 L 2832 796 L 2854 806 L 2832 816 L 2810 806" fill="none" stroke="#205e9e" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 2810 818 L 2832 808 L 2854 818 L 2832 828 L 2810 818" fill="none" stroke="#205e9e" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="2870" y="802" fill="#202544" font-family="DejaVu Sans,sans-serif" font-size="25" font-weight="700" letter-spacing="0">Full decision trace</text>
+<text x="2810" y="847" fill="#52617c" font-family="DejaVu Sans,sans-serif" font-size="23" font-weight="400" letter-spacing="0">Raw → refined → accepted</text>
+<text x="2810" y="877.82" fill="#52617c" font-family="DejaVu Sans,sans-serif" font-size="23" font-weight="400" letter-spacing="0">→ executed; record solver</text>
+<text x="2810" y="908.6400000000001" fill="#52617c" font-family="DejaVu Sans,sans-serif" font-size="23" font-weight="400" letter-spacing="0">and gate interventions.</text>
+<rect x="2794" y="970" width="350" height="250" rx="13" fill="#ffffff" stroke="#205e9e"/>
+<path d="M 2810 1007 L 2831 987" fill="none" stroke="#205e9e" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 2810 1007 L 2833 1028" fill="none" stroke="#205e9e" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 2831 987 L 2853 1007" fill="none" stroke="#205e9e" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 2833 1028 L 2853 1007" fill="none" stroke="#205e9e" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 2810 1007 L 2853 1007" fill="none" stroke="#205e9e" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 2816 1007 C 2816 1010.314 2813.314 1013 2810 1013 C 2806.686 1013 2804 1010.314 2804 1007 C 2804 1003.686 2806.686 1001 2810 1001 C 2813.314 1001 2816 1003.686 2816 1007 Z " fill="#ffffff" stroke="#205e9e" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 2837 987 C 2837 990.314 2834.314 993 2831 993 C 2827.686 993 2825 990.314 2825 987 C 2825 983.686 2827.686 981 2831 981 C 2834.314 981 2837 983.686 2837 987 Z " fill="#ffffff" stroke="#205e9e" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 2839 1028 C 2839 1031.314 2836.314 1034 2833 1034 C 2829.686 1034 2827 1031.314 2827 1028 C 2827 1024.686 2829.686 1022 2833 1022 C 2836.314 1022 2839 1024.686 2839 1028 Z " fill="#ffffff" stroke="#205e9e" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 2859 1007 C 2859 1010.314 2856.314 1013 2853 1013 C 2849.686 1013 2847 1010.314 2847 1007 C 2847 1003.686 2849.686 1001 2853 1001 C 2856.314 1001 2859 1003.686 2859 1007 Z " fill="#ffffff" stroke="#205e9e" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="2870" y="1005" fill="#202544" font-family="DejaVu Sans,sans-serif" font-size="25" font-weight="700" letter-spacing="0">Decision</text>
+<text x="2870" y="1038.5" fill="#202544" font-family="DejaVu Sans,sans-serif" font-size="25" font-weight="700" letter-spacing="0">explanation</text>
+<text x="2810" y="1082" fill="#52617c" font-family="DejaVu Sans,sans-serif" font-size="23" font-weight="400" letter-spacing="0">Grounded rationale,</text>
+<text x="2810" y="1112.82" fill="#52617c" font-family="DejaVu Sans,sans-serif" font-size="23" font-weight="400" letter-spacing="0">selected path, risk</text>
+<text x="2810" y="1143.6399999999999" fill="#52617c" font-family="DejaVu Sans,sans-serif" font-size="23" font-weight="400" letter-spacing="0">estimates and actual</text>
+<text x="2810" y="1174.4599999999998" fill="#52617c" font-family="DejaVu Sans,sans-serif" font-size="23" font-weight="400" letter-spacing="0">motion.</text>
+<path d="M 238 402 L 238 384 L 1409 384" fill="none" stroke="#7d8caa" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 1006 384 L 1006 402" fill="none" stroke="#7d8caa" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 1006 402 L 999.288 389.714 L 1012.712 389.714 Z " fill="#7d8caa" stroke="none" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 1396 384 L 1396 402" fill="none" stroke="#7d8caa" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 1396 402 L 1389.288 389.714 L 1402.712 389.714 Z " fill="#7d8caa" stroke="none" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 1005 1328 L 1005 1350 L 1788 1350" fill="none" stroke="#6432ac" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 1788 1350 L 1788 1328" fill="none" stroke="#6432ac" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 1788 1328 L 1794.712 1340.286 L 1781.288 1340.286 Z " fill="#6432ac" stroke="none" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="1100" y="1381" fill="#6432ac" font-family="DejaVu Sans,sans-serif" font-size="23" font-weight="400" letter-spacing="0">Grounded claims → critic + policy; fresh scene evidence also constrains control.</text>
+<path d="M 2980 1328 L 2980 1428 L 220 1428" fill="none" stroke="#6432ac" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 220 1428 L 220 1328" fill="none" stroke="#6432ac" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 220 1328 L 226.712 1340.286 L 213.288 1340.286 Z " fill="#6432ac" stroke="none" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="440" y="1400" width="2355" height="55" rx="20" fill="#f1ecfc" stroke="none"/>
+<text x="471" y="1437" fill="#6432ac" font-family="DejaVu Sans,sans-serif" font-size="25" font-weight="700" letter-spacing="0">CLOSED LOOP  ·  actuator → environment → next observation    |    M16: multirate scheduling, age, deadlines and compute</text>
+<rect x="30" y="1530" width="3140" height="535" rx="24" fill="#ffffff" stroke="#a799d0"/>
+<rect x="48" y="1508" width="1170" height="61" rx="20" fill="#6432ac" stroke="none"/>
+<text x="80" y="1550" fill="#ffffff" font-family="DejaVu Sans,sans-serif" font-size="29" font-weight="700" letter-spacing="0">02   OFFLINE LEARNING, EVALUATION &amp; RESEARCH</text>
+<text x="1260" y="1550" fill="#52617c" font-family="DejaVu Sans,sans-serif" font-size="25" font-weight="400" letter-spacing="0">M19–M21  ·  Future / oracle labels stay outside live policy inputs.</text>
+<rect x="52" y="1598" width="600" height="440" rx="18" fill="#edf6ff" stroke="#1763aa"/>
+<rect x="53" y="1599" width="598" height="76" rx="16" fill="#1763aa" stroke="none"/>
+<text x="72" y="1648" fill="#ffffff" font-family="DejaVu Sans,sans-serif" font-size="28" font-weight="700" letter-spacing="0">01  Data generation</text>
+<path d="M 78 1710 L 100 1700 L 122 1710 L 100 1720 L 78 1710" fill="none" stroke="#1763aa" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 78 1722 L 100 1712 L 122 1722 L 100 1732 L 78 1722" fill="none" stroke="#1763aa" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 78 1734 L 100 1724 L 122 1734 L 100 1744 L 78 1734" fill="none" stroke="#1763aa" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="144" y="1726" fill="#202544" font-family="DejaVu Sans,sans-serif" font-size="26" font-weight="400" letter-spacing="0">Expert demonstrations, causal</text>
+<text x="144" y="1760.84" fill="#202544" font-family="DejaVu Sans,sans-serif" font-size="26" font-weight="400" letter-spacing="0">sensor logs, diverse routes, weather</text>
+<text x="144" y="1795.6799999999998" fill="#202544" font-family="DejaVu Sans,sans-serif" font-size="26" font-weight="400" letter-spacing="0">and rare events. Versioned splits</text>
+<text x="144" y="1830.5199999999998" fill="#202544" font-family="DejaVu Sans,sans-serif" font-size="26" font-weight="400" letter-spacing="0">and cache fingerprints.</text>
+<rect x="70" y="1929" width="564" height="90" rx="12" fill="#ffffff" stroke="none"/>
+<text x="84" y="1961" fill="#1763aa" font-family="DejaVu Sans,sans-serif" font-size="24" font-weight="700" letter-spacing="0">TRAIN ONLY: iterate on training</text>
+<text x="84" y="1993.16" fill="#1763aa" font-family="DejaVu Sans,sans-serif" font-size="24" font-weight="700" letter-spacing="0">failures.</text>
+<path d="M 652 1817 L 676 1817" fill="none" stroke="#6432ac" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 676 1817 L 663.714 1823.712 L 663.714 1810.288 Z " fill="#6432ac" stroke="none" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="676" y="1598" width="600" height="440" rx="18" fill="#f6effd" stroke="#7b40ad"/>
+<rect x="677" y="1599" width="598" height="76" rx="16" fill="#7b40ad" stroke="none"/>
+<text x="696" y="1648" fill="#ffffff" font-family="DejaVu Sans,sans-serif" font-size="28" font-weight="700" letter-spacing="0">02  Annotation &amp; supervision</text>
+<path d="M 724 1700 L 745 1709 L 741 1728 L 724 1744 L 707 1728 L 703 1709 Z " fill="none" stroke="#7b40ad" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 713 1720 L 722 1729 L 735 1713" fill="none" stroke="#7b40ad" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="768" y="1726" fill="#202544" font-family="DejaVu Sans,sans-serif" font-size="26" font-weight="400" letter-spacing="0">Visibility / occlusion labels, multiple</text>
+<text x="768" y="1760.84" fill="#202544" font-family="DejaVu Sans,sans-serif" font-size="26" font-weight="400" letter-spacing="0">valid trajectory targets, grounded</text>
+<text x="768" y="1795.6799999999998" fill="#202544" font-family="DejaVu Sans,sans-serif" font-size="26" font-weight="400" letter-spacing="0">reasoning and counterfactual</text>
+<text x="768" y="1830.5199999999998" fill="#202544" font-family="DejaVu Sans,sans-serif" font-size="26" font-weight="400" letter-spacing="0">rollout outcomes.</text>
+<rect x="694" y="1929" width="564" height="90" rx="12" fill="#ffffff" stroke="none"/>
+<text x="708" y="1961" fill="#7b40ad" font-family="DejaVu Sans,sans-serif" font-size="24" font-weight="700" letter-spacing="0">Privileged future information is</text>
+<text x="708" y="1993.16" fill="#7b40ad" font-family="DejaVu Sans,sans-serif" font-size="24" font-weight="700" letter-spacing="0">label-only.</text>
+<path d="M 1276 1817 L 1300 1817" fill="none" stroke="#6432ac" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 1300 1817 L 1287.714 1823.712 L 1287.714 1810.288 Z " fill="#6432ac" stroke="none" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="1300" y="1598" width="600" height="440" rx="18" fill="#eef9f0" stroke="#278451"/>
+<rect x="1301" y="1599" width="598" height="76" rx="16" fill="#278451" stroke="none"/>
+<text x="1320" y="1648" fill="#ffffff" font-family="DejaVu Sans,sans-serif" font-size="28" font-weight="700" letter-spacing="0">03  Small-model learning</text>
+<path d="M 1326 1720 L 1347 1700" fill="none" stroke="#278451" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 1326 1720 L 1349 1741" fill="none" stroke="#278451" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 1347 1700 L 1369 1720" fill="none" stroke="#278451" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 1349 1741 L 1369 1720" fill="none" stroke="#278451" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 1326 1720 L 1369 1720" fill="none" stroke="#278451" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 1332 1720 C 1332 1723.314 1329.314 1726 1326 1726 C 1322.686 1726 1320 1723.314 1320 1720 C 1320 1716.686 1322.686 1714 1326 1714 C 1329.314 1714 1332 1716.686 1332 1720 Z " fill="#ffffff" stroke="#278451" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 1353 1700 C 1353 1703.314 1350.314 1706 1347 1706 C 1343.686 1706 1341 1703.314 1341 1700 C 1341 1696.686 1343.686 1694 1347 1694 C 1350.314 1694 1353 1696.686 1353 1700 Z " fill="#ffffff" stroke="#278451" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 1355 1741 C 1355 1744.314 1352.314 1747 1349 1747 C 1345.686 1747 1343 1744.314 1343 1741 C 1343 1737.686 1345.686 1735 1349 1735 C 1352.314 1735 1355 1737.686 1355 1741 Z " fill="#ffffff" stroke="#278451" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 1375 1720 C 1375 1723.314 1372.314 1726 1369 1726 C 1365.686 1726 1363 1723.314 1363 1720 C 1363 1716.686 1365.686 1714 1369 1714 C 1372.314 1714 1375 1716.686 1375 1720 Z " fill="#ffffff" stroke="#278451" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="1392" y="1726" fill="#202544" font-family="DejaVu Sans,sans-serif" font-size="26" font-weight="400" letter-spacing="0">Critic + ranking + calibration;</text>
+<text x="1392" y="1760.84" fill="#202544" font-family="DejaVu Sans,sans-serif" font-size="26" font-weight="400" letter-spacing="0">horizon-student distillation;</text>
+<text x="1392" y="1795.6799999999998" fill="#202544" font-family="DejaVu Sans,sans-serif" font-size="26" font-weight="400" letter-spacing="0">supervised initialization →</text>
+<text x="1392" y="1830.5199999999998" fill="#202544" font-family="DejaVu Sans,sans-serif" font-size="26" font-weight="400" letter-spacing="0">closed-loop PPO → CVaR studies.</text>
+<rect x="1318" y="1929" width="564" height="90" rx="12" fill="#ffffff" stroke="none"/>
+<text x="1332" y="1961" fill="#278451" font-family="DejaVu Sans,sans-serif" font-size="24" font-weight="700" letter-spacing="0">Train selector / residual; freeze large</text>
+<text x="1332" y="1993.16" fill="#278451" font-family="DejaVu Sans,sans-serif" font-size="24" font-weight="700" letter-spacing="0">planners.</text>
+<path d="M 1900 1817 L 1924 1817" fill="none" stroke="#6432ac" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 1924 1817 L 1911.714 1823.712 L 1911.714 1810.288 Z " fill="#6432ac" stroke="none" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="1924" y="1598" width="600" height="440" rx="18" fill="#fff7e6" stroke="#ad761b"/>
+<rect x="1925" y="1599" width="598" height="76" rx="16" fill="#ad761b" stroke="none"/>
+<text x="1944" y="1648" fill="#ffffff" font-family="DejaVu Sans,sans-serif" font-size="28" font-weight="700" letter-spacing="0">04  Evaluation &amp; explanation</text>
+<path d="M 1950 1715 C 1963 1692 1976 1730 1994 1700" fill="none" stroke="#ad761b" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 1950 1727 C 1963 1704 1976 1742 1994 1712" fill="none" stroke="#ad761b" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 1950 1739 C 1963 1716 1976 1754 1994 1724" fill="none" stroke="#ad761b" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="2016" y="1726" fill="#202544" font-family="DejaVu Sans,sans-serif" font-size="26" font-weight="400" letter-spacing="0">Trajectory error, driving success,</text>
+<text x="2016" y="1760.84" fill="#202544" font-family="DejaVu Sans,sans-serif" font-size="26" font-weight="400" letter-spacing="0">safety events, tail risk, comfort,</text>
+<text x="2016" y="1795.6799999999998" fill="#202544" font-family="DejaVu Sans,sans-serif" font-size="26" font-weight="400" letter-spacing="0">latency and memory. Paired</text>
+<text x="2016" y="1830.5199999999998" fill="#202544" font-family="DejaVu Sans,sans-serif" font-size="26" font-weight="400" letter-spacing="0">semantic / world interventions.</text>
+<rect x="1942" y="1929" width="564" height="90" rx="12" fill="#ffffff" stroke="none"/>
+<text x="1956" y="1961" fill="#ad761b" font-family="DejaVu Sans,sans-serif" font-size="24" font-weight="700" letter-spacing="0">Matched sensors, candidates, compute</text>
+<text x="1956" y="1993.16" fill="#ad761b" font-family="DejaVu Sans,sans-serif" font-size="24" font-weight="700" letter-spacing="0">and control.</text>
+<path d="M 2524 1817 L 2548 1817" fill="none" stroke="#6432ac" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 2548 1817 L 2535.714 1823.712 L 2535.714 1810.288 Z " fill="#6432ac" stroke="none" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="2548" y="1598" width="600" height="440" rx="18" fill="#f5efff" stroke="#7438b6"/>
+<rect x="2549" y="1599" width="598" height="76" rx="16" fill="#7438b6" stroke="none"/>
+<text x="2568" y="1648" fill="#ffffff" font-family="DejaVu Sans,sans-serif" font-size="28" font-weight="700" letter-spacing="0">05  Failure analysis &amp; transfer</text>
+<path d="M 2616 1722 C 2616 1733.046 2607.046 1742 2596 1742 C 2584.954 1742 2576 1733.046 2576 1722 C 2576 1710.954 2584.954 1702 2596 1702 C 2607.046 1702 2616 1710.954 2616 1722 Z " fill="#ffffff" stroke="#7438b6" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 2596 1708 L 2596 1722 L 2608 1726" fill="none" stroke="#7438b6" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="2640" y="1726" fill="#202544" font-family="DejaVu Sans,sans-serif" font-size="26" font-weight="400" letter-spacing="0">Ablations, expert comparisons,</text>
+<text x="2640" y="1760.84" fill="#202544" font-family="DejaVu Sans,sans-serif" font-size="26" font-weight="400" letter-spacing="0">robustness, human explanation</text>
+<text x="2640" y="1795.6799999999998" fill="#202544" font-family="DejaVu Sans,sans-serif" font-size="26" font-weight="400" letter-spacing="0">studies, visual representations and</text>
+<text x="2640" y="1830.5199999999998" fill="#202544" font-family="DejaVu Sans,sans-serif" font-size="26" font-weight="400" letter-spacing="0">cross-domain transfer.</text>
+<rect x="2566" y="1929" width="564" height="90" rx="12" fill="#ffffff" stroke="none"/>
+<text x="2580" y="1961" fill="#7438b6" font-family="DejaVu Sans,sans-serif" font-size="24" font-weight="700" letter-spacing="0">Preserve held-out tests; version every</text>
+<text x="2580" y="1993.16" fill="#7438b6" font-family="DejaVu Sans,sans-serif" font-size="24" font-weight="700" letter-spacing="0">data cycle.</text>
+<rect x="40" y="2103" width="3120" height="72" rx="19" fill="#ece8f7" stroke="none"/>
+<text x="70" y="2148" fill="#6432ac" font-family="DejaVu Sans,sans-serif" font-size="25" font-weight="700" letter-spacing="0">RESEARCH CONTRIBUTIONS</text>
+<text x="575" y="2148" fill="#202544" font-family="DejaVu Sans,sans-serif" font-size="24" font-weight="700" letter-spacing="0">Evidence-conditioned choice</text>
+<text x="1235" y="2148" fill="#202544" font-family="DejaVu Sans,sans-serif" font-size="24" font-weight="700" letter-spacing="0">Calibrated risk assessment</text>
+<text x="1875" y="2148" fill="#202544" font-family="DejaVu Sans,sans-serif" font-size="24" font-weight="700" letter-spacing="0">Physically constrained motion</text>
+<text x="2575" y="2148" fill="#202544" font-family="DejaVu Sans,sans-serif" font-size="24" font-weight="700" letter-spacing="0">Causal explanation analysis</text>
+<text x="55" y="2202" fill="#52617c" font-family="DejaVu Sans,sans-serif" font-size="21" font-weight="400" letter-spacing="0">Design specification · numerical rates are targets · illustrative overview; the complete 54-record dependency graph remains the implementation reference.</text>
+</svg>
